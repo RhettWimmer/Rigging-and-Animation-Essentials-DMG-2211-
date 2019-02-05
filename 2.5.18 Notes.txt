@@ -1,0 +1,28 @@
+Local space:
+When parenting something,
+the child's local space will change
+to it's parents
+
+
+X is pointing down joint chain. 
+Z Pointing up. it's the pin it rotates on
+
+Orient joint tool
+
+zero out all joint oreient in
+attribute editor to make
+tip joint match it's parent
+
+
+Always zero out joints
+
+
+cheat- freeze transformation options.
+Freeze just rotations
+
+
+everything should be 0, but X will have something In channel box
+Attribute box all 0
+
+____
+Constrains are like siblings
