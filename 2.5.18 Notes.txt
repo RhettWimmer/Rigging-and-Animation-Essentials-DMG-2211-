@@ -26,3 +26,24 @@ Attribute box all 0
 
 ____
 Constrains are like siblings
+
+
+2/7/2019
+_________
+
+Constraints
+	Parent -> Translate/Rotate
+
+Constraints have PRIORITY over hierarchy
+
+Maintain offset to keep them in their areas
+
+
+Orient constrain: child rotates on it's own axis
+
+Parentgroup (orientation/contraints-heiarchy)
+|
+-Controls -> Joints -> Geometry
+
+
+group, control> group, control
