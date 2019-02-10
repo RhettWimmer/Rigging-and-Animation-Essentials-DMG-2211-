@@ -1,1 +1,2 @@
 How to link geometry to joints
+Why are my joints rolling
