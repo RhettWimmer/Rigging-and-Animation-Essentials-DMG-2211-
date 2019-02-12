@@ -1,2 +1,6 @@
 How to link geometry to joints
+	contrain geometry to joints
+_______________________________________
+
 Why are my joints rolling
+	orient
