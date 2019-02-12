@@ -53,4 +53,4 @@ _________
 
 Turn off visibility of lamp if you want to make him do a walk up
 
-
+Project window > New > 
