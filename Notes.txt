@@ -47,3 +47,10 @@ Parentgroup (orientation/contraints-heiarchy)
 
 
 group, control> group, control
+
+_________
+2/12/2019
+
+Turn off visibility of lamp if you want to make him do a walk up
+
+
