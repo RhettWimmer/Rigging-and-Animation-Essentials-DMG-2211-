@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: LampOnPole.ma
-//Last modified: Tue, Feb 19, 2019 10:39:47 PM
+//Last modified: Tue, Feb 19, 2019 11:32:54 PM
 //Codeset: 1252
 file -rdi 1 -ns "Rhett_Wimmer_Lamp_from_Head" -rfn "Rhett_Wimmer_Lamp_from_HeadRN"
 		 -op "v=0;" -typ "mayaAscii" "D:/School/Rigging/Rigging and Animation Essentials (DMG 2211)/Lamp/Rhett Wimmer Lamp from Head.ma";
@@ -21,17 +21,17 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "E9187F91-4709-75B2-04BA-878CFC32353D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -16.459135872101946 59.299772715814449 -207.64465287635159 ;
-	setAttr ".r" -type "double3" -3.9383527359584782 -3775.7999999973172 0 ;
+	setAttr ".t" -type "double3" -59.459987644169125 -14.218332968012469 -242.29142943530888 ;
+	setAttr ".r" -type "double3" 6.8616472685237273 -3772.199999994074 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A636B87F-40C7-66B8-D59D-8D9EC6A25A39";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 208.68776181396748;
+	setAttr ".coi" 246.31832877186167;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -1.2113129759546775 44.966448884088351 -0.0088138316745696166 ;
+	setAttr ".tp" -type "double3" -26.270190277176937 15.209879038407303 0 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "77AAFC30-42E9-F555-3BBF-84AB2F856A79";
@@ -158,7 +158,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "6ACE18D7-4D7F-D84F-B458-00BA3B4DE2E7";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 50 -ast 0 -aet 50 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 95 -ast 0 -aet 95 ";
 	setAttr ".st" 6;
 createNode polyCylinder -n "polyCylinder1";
 	rename -uid "D8C61380-4D60-5B08-0B5F-D9A8AE3BB85B";
@@ -581,7 +581,7 @@ createNode animCurveTU -n "Base_Const_scaleZ1";
 	setAttr -s 3 ".ktv[0:2]"  0 1 12 1 24 1;
 createNode reference -n "Rhett_Wimmer_Lamp_from_HeadRN";
 	rename -uid "AE4D5DA0-4F54-2C87-1AC4-F2A5A7E26A03";
-	setAttr -s 55 ".phl";
+	setAttr -s 41 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -623,34 +623,41 @@ createNode reference -n "Rhett_Wimmer_Lamp_from_HeadRN";
 	setAttr ".phl[39]" 0;
 	setAttr ".phl[40]" 0;
 	setAttr ".phl[41]" 0;
-	setAttr ".phl[42]" 0;
-	setAttr ".phl[43]" 0;
-	setAttr ".phl[44]" 0;
-	setAttr ".phl[45]" 0;
-	setAttr ".phl[46]" 0;
-	setAttr ".phl[47]" 0;
-	setAttr ".phl[48]" 0;
-	setAttr ".phl[49]" 0;
-	setAttr ".phl[50]" 0;
-	setAttr ".phl[51]" 0;
-	setAttr ".phl[52]" 0;
-	setAttr ".phl[53]" 0;
-	setAttr ".phl[54]" 0;
-	setAttr ".phl[55]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Rhett_Wimmer_Lamp_from_HeadRN"
 		"Rhett_Wimmer_Lamp_from_HeadRN" 0
-		"Rhett_Wimmer_Lamp_from_HeadRN" 80
-		1 |Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo 
-		"blendParent1" "blendParent1" " -ci 1 -k 1 -dv 1 -smn 0 -smx 1 -at \"double\""
+		"Rhett_Wimmer_Lamp_from_HeadRN" 103
 		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
-		"visibility" " -av 0"
+		"visibility" " -av 1"
 		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
-		"blendParent1" " -k 1"
+		"translate" " -type \"double3\" -58.47959292803500375 -20.88979759506913325 0"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
+		"translateX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
+		"translateY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
+		"translateZ" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
+		"rotate" " -type \"double3\" -2.44209936660514293 -1.20778123770007895 -1155.63717961356246633"
+		
+		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
+		"rotateX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
+		"rotateY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
+		"rotateZ" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
+		"scaleX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
+		"scaleY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo" 
+		"scaleZ" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const" 
-		"visibility" " -av 0"
+		"visibility" " -av 1"
 		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const" 
-		"translate" " -type \"double3\" 1.15552476579345553 20.95347834359126438 0"
+		"translate" " -type \"double3\" -58.47959292803500375 -20.8897975950691297 0"
 		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const" 
 		"translateX" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const" 
@@ -658,7 +665,8 @@ createNode reference -n "Rhett_Wimmer_Lamp_from_HeadRN";
 		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const" 
 		"translateZ" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" -2.44209936660512428 -1.20778123769102774 -1155.63717961356292108"
+		
 		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const" 
 		"rotateX" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const" 
@@ -673,148 +681,164 @@ createNode reference -n "Rhett_Wimmer_Lamp_from_HeadRN";
 		"scaleY" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const" 
 		"scaleZ" " -av"
-		2 "Rhett_Wimmer_Lamp_from_Head:geo_layer" "displayType" " 0"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"visibility" " -av 1"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"translateY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"translateX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"translateZ" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"rotate" " -type \"double3\" -0.019825888544222191 -0.068444919582732466 113.96197944324320872"
+		
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"rotateZ" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"rotateX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"rotateY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"scaleX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"scaleY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const" 
+		"scaleZ" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"visibility" " -av 1"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"translateX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"translateY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"translateZ" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"rotate" " -type \"double3\" 0 0 100.99387574440125093"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"rotateX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"rotateY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"rotateZ" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"scaleX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"scaleY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const" 
+		"scaleZ" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const" 
+		"translate" " -type \"double3\" 0 0 0"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const" 
+		"translateX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const" 
+		"translateY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const" 
+		"translateZ" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const" 
+		"rotate" " -type \"double3\" 0 0 28.00600985967455259"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const" 
+		"rotateX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const" 
+		"rotateY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const" 
+		"rotateZ" " -av"
+		2 "Rhett_Wimmer_Lamp_from_Head:geo_layer" "displayType" " 2"
 		2 "Rhett_Wimmer_Lamp_from_Head:geo_layer" "visibility" " 1"
-		2 "Rhett_Wimmer_Lamp_from_Head:Joints_Layer" "visibility" " 0"
-		3 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintTranslateX" 
-		"|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.translateX" 
-		""
-		3 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintTranslateY" 
-		"|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.translateY" 
-		""
-		3 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintTranslateZ" 
-		"|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.translateZ" 
-		""
-		3 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintRotateX" 
-		"|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.rotateX" 
-		""
-		3 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintRotateY" 
-		"|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.rotateY" 
-		""
-		3 "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintRotateZ" 
-		"|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.rotateZ" 
-		""
-		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.translateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[1]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.translateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[2]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.translateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[3]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.rotateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[4]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.rotateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[5]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.rotateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[6]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.visibility" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[7]" ""
-		5 3 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.blendParent1" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[8]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo.blendParent1" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[9]" ""
-		5 3 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintTranslateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[10]" "Rhett_Wimmer_Lamp_from_Head:head_geo.tx"
-		
-		5 3 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintTranslateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[11]" "Rhett_Wimmer_Lamp_from_Head:head_geo.ty"
-		
-		5 3 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintTranslateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[12]" "Rhett_Wimmer_Lamp_from_Head:head_geo.tz"
-		
-		5 3 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintRotateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[13]" "Rhett_Wimmer_Lamp_from_Head:head_geo.rx"
-		
-		5 3 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintRotateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[14]" "Rhett_Wimmer_Lamp_from_Head:head_geo.ry"
-		
-		5 3 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Geometry|Rhett_Wimmer_Lamp_from_Head:head_geo|Rhett_Wimmer_Lamp_from_Head:head_geo_parentConstraint1.constraintRotateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[15]" "Rhett_Wimmer_Lamp_from_Head:head_geo.rz"
-		
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[1]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const.translateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[16]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[2]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const.translateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[17]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[3]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const.translateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[18]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[4]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const.rotateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[19]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[5]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const.rotateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[20]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[6]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const.rotateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[21]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[7]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const.scaleX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[22]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[8]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const.scaleY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[23]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[9]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const.scaleZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[24]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[10]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const.visibility" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[25]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[11]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const.translateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[26]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[12]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const.translateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[27]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[13]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const.translateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[28]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[14]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const.rotateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[29]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[15]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const.rotateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[30]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[16]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const.rotateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[31]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[17]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const.scaleX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[32]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[18]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const.scaleY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[33]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[19]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const.scaleZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[34]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[20]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const.visibility" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[35]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[21]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const.translateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[36]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[22]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const.translateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[37]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[23]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const.translateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[38]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[24]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const.rotateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[39]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[25]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const.rotateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[40]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[26]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const.rotateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[41]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[27]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const.scaleX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[42]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[28]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const.scaleY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[43]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[29]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const.scaleZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[44]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[30]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const.visibility" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[45]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[31]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const.translateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[46]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[32]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const.translateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[47]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[33]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const.translateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[48]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[34]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const.rotateX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[49]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[35]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const.rotateY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[50]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[36]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const.rotateZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[51]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[37]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const.scaleX" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[52]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[38]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const.scaleY" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[53]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[39]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const.scaleZ" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[54]" ""
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[40]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_HeadRN" "|Rhett_Wimmer_Lamp_from_Head:Constrains|Rhett_Wimmer_Lamp_from_Head:Head|Rhett_Wimmer_Lamp_from_Head:Head_Const|Rhett_Wimmer_Lamp_from_Head:UpperArm|Rhett_Wimmer_Lamp_from_Head:UpperArm_Const|Rhett_Wimmer_Lamp_from_Head:LowerArm|Rhett_Wimmer_Lamp_from_Head:Lowerarm_Const|Rhett_Wimmer_Lamp_from_Head:Base|Rhett_Wimmer_Lamp_from_Head:Base_Const.visibility" 
-		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[55]" "";
+		"Rhett_Wimmer_Lamp_from_HeadRN.placeHolderList[41]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "Rhett_Wimmer_Lamp_from_BaseRN";
 	rename -uid "CCC7BD31-4D40-6B65-D6B2-42AF689C2D06";
-	setAttr -s 40 ".phl";
+	setAttr -s 41 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -855,14 +879,43 @@ createNode reference -n "Rhett_Wimmer_Lamp_from_BaseRN";
 	setAttr ".phl[38]" 0;
 	setAttr ".phl[39]" 0;
 	setAttr ".phl[40]" 0;
+	setAttr ".phl[41]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Rhett_Wimmer_Lamp_from_BaseRN"
 		"Rhett_Wimmer_Lamp_from_BaseRN" 0
-		"Rhett_Wimmer_Lamp_from_BaseRN" 77
+		"Rhett_Wimmer_Lamp_from_BaseRN" 90
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"visibility" " -av 0"
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"translate" " -type \"double3\" 1.20135337065789116 21.01695068036569936 0.2004202090654541"
+		
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"translateX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"translateY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"translateZ" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"rotate" " -type \"double3\" 0 0 0.25622464716886206"
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"rotateX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"rotateY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"rotateZ" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"scale" " -type \"double3\" 1 1 1"
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"scaleX" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"scaleY" " -av"
+		2 "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo" 
+		"scaleZ" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const" 
-		"visibility" " -av 1"
+		"visibility" " -av 0"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const" 
-		"translate" " -type \"double3\" 45.0734459985583058 0 0"
+		"translate" " -type \"double3\" 1.20135337065789116 21.01695068036569936 0.2004202090654541"
+		
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const" 
 		"translateX" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const" 
@@ -870,7 +923,7 @@ createNode reference -n "Rhett_Wimmer_Lamp_from_BaseRN";
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const" 
 		"translateZ" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 0.25622464716886495"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const" 
 		"rotateX" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const" 
@@ -896,7 +949,7 @@ createNode reference -n "Rhett_Wimmer_Lamp_from_BaseRN";
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const" 
 		"translateZ" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 9.78309411083909453"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const" 
 		"rotateX" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const" 
@@ -912,7 +965,7 @@ createNode reference -n "Rhett_Wimmer_Lamp_from_BaseRN";
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const" 
 		"scaleZ" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 -9.8943458326781677"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const" 
 		"rotateZ" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const" 
@@ -924,321 +977,431 @@ createNode reference -n "Rhett_Wimmer_Lamp_from_BaseRN";
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const" 
 		"translateZ" " -av"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const" 
-		"rotate" " -type \"double3\" 0 0 0"
+		"rotate" " -type \"double3\" 0 0 -0.11458908517262005"
 		2 "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const" 
 		"rotateZ" " -av"
-		2 "Rhett_Wimmer_Lamp_from_Base:geo_layer" "displayType" " 0"
+		2 "Rhett_Wimmer_Lamp_from_Base:geo_layer" "displayType" " 2"
 		2 "Rhett_Wimmer_Lamp_from_Base:geo_layer" "visibility" " 1"
-		2 "Rhett_Wimmer_Lamp_from_Base:jnt_layer" "visibility" " 0"
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.translateX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Geometry|Rhett_Wimmer_Lamp_from_Base:base_geo.visibility" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[1]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.translateY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.translateX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[2]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.translateZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.translateY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[3]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.rotateX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.translateZ" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[4]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.rotateY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.rotateX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[5]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.rotateZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.rotateY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[6]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.scaleX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.rotateZ" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[7]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.scaleY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.scaleX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[8]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.scaleZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.scaleY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[9]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.visibility" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.scaleZ" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[10]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.translateX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const.visibility" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[11]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.translateY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.translateX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[12]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.translateZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.translateY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[13]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.rotateX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.translateZ" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[14]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.rotateY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.rotateX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[15]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.rotateZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.rotateY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[16]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.scaleX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.rotateZ" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[17]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.scaleY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.scaleX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[18]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.scaleZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.scaleY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[19]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.visibility" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.scaleZ" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[20]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.translateX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const.visibility" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[21]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.translateY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.translateX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[22]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.translateZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.translateY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[23]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.rotateX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.translateZ" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[24]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.rotateY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.rotateX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[25]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.rotateZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.rotateY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[26]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.scaleX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.rotateZ" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[27]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.scaleY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.scaleX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[28]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.scaleZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.scaleY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[29]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.visibility" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.scaleZ" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[30]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.translateX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const.visibility" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[31]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.translateY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.translateX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[32]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.translateZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.translateY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[33]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.rotateX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.translateZ" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[34]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.rotateY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.rotateX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[35]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.rotateZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.rotateY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[36]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.scaleX" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.rotateZ" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[37]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.scaleY" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.scaleX" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[38]" ""
-		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.scaleZ" 
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.scaleY" 
 		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[39]" ""
+		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.scaleZ" 
+		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[40]" ""
 		5 4 "Rhett_Wimmer_Lamp_from_BaseRN" "|Rhett_Wimmer_Lamp_from_Base:Constrains|Rhett_Wimmer_Lamp_from_Base:Base|Rhett_Wimmer_Lamp_from_Base:Base_Const|Rhett_Wimmer_Lamp_from_Base:LowerArm|Rhett_Wimmer_Lamp_from_Base:LowerArm_Const|Rhett_Wimmer_Lamp_from_Base:UpperArm|Rhett_Wimmer_Lamp_from_Base:UpperArm_Const|Rhett_Wimmer_Lamp_from_Base:Shade|Rhett_Wimmer_Lamp_from_Base:Shade_Const.visibility" 
-		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[40]" "";
+		"Rhett_Wimmer_Lamp_from_BaseRN.placeHolderList[41]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode animCurveTL -n "Head_Const_translateX1";
 	rename -uid "67B2F35B-4B1A-0AC2-7923-459D0E99B03A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 1.1555247657934555 25 1.1555247657934555
+	setAttr -s 42 ".ktv[0:41]"  0 1.1555247657934555 25 1.1555247657934555
 		 28 1.1555247657934555 29 1.434609728644713 30 1.9219700395233934 31 2.5409434344268824
 		 32 3.228471955096758 33 5.1905604177941802 34 5.4339423999377061 35 5.2376792002329751
 		 36 4.6044518260631033 37 3.6579393712300128 38 2.1509990380565203 39 1.181116729858668
-		 40 0.8540814074471248 41 1.1766923791385393 42 1.8775405433657903;
+		 40 0.8540814074471248 41 1.1766923791385393 42 1.8775405433657903 43 2.6473036162542796
+		 44 4.4900929368288418 45 5.4975935971732817 46 5.1976358646758287 47 3.7302948310323285
+		 48 1.9683967747938484 49 0.83561861691086214 50 1.1181302697311599 51 2.3968114308339556
+		 52 3.863426403985919 53 4.8434130537149986 54 5.6252249279064745 55 5.6252249279064745
+		 56 1.5535733992646286 57 -8.1860710825255971 58 -14.192207609217025 59 -18.765133738946471
+		 60 -21.96091292136154 61 -25.152634177818349 62 -26.820683696992038 63 -29.946430378677757
+		 65 -41.137540988191923 67 -48.418567793254823 68 -53.982582631976506 70 -58.479592928035004;
 createNode animCurveTL -n "Head_Const_translateY1";
 	rename -uid "5421F2D1-4E0B-70B0-53EF-8AB317B63C4C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 20.953478343591264 25 20.953478343591264
+	setAttr -s 42 ".ktv[0:41]"  0 20.953478343591264 25 20.953478343591264
 		 28 20.953478343591264 29 20.953478343591264 30 21.153242932435198 31 21.39078375729023
 		 32 21.735596002346959 33 20.742307140851793 34 20.148007935378942 35 18.727362257439935
 		 36 17.936485598832846 37 17.286556024596599 38 17.286556024596599 39 18.308821111876021
-		 40 19.501754556151838 41 21.028355756399357 42 21.617820671521542;
+		 40 19.501754556151838 41 21.028355756399357 42 21.617820671521542 43 21.785959399934207
+		 44 21.283325302266526 45 19.591147798613115 46 18.631057951427309 47 17.284766460135394
+		 48 17.582804959249266 49 18.913252535089704 50 20.738687789554767 51 21.921785582189351
+		 52 21.921785582189351 53 21.220513197255947 54 19.462052458018697 55 17.394058242338218
+		 56 14.517784030953649 57 10.816245141884067 58 5.5311105788733528 59 -0.77802207787801692
+		 60 -6.9879253427915735 61 -12.231779599489435 62 -18.039438489932159 63 -20.88979759506913
+		 65 -20.88979759506913 67 -20.88979759506913 68 -20.88979759506913 70 -20.88979759506913;
 createNode animCurveTL -n "Head_Const_translateZ1";
 	rename -uid "228A3BF4-4EB8-8F58-2C88-09B08151FE41";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 25 0 28 0 29 0 30 0 31 0 32 0 33 0 34 0
-		 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0;
+	setAttr -s 42 ".ktv[0:41]"  0 0 25 0 28 0 29 0 30 0 31 0 32 0 33 0 34 0
+		 35 0 36 0 37 0 38 0 39 0 40 0 41 0 42 0 43 0 44 0 45 0 46 0 47 0 48 0 49 0 50 0 51 0
+		 52 0 53 0 54 0 55 0 56 0 57 0 58 0 59 0 60 0 61 0 62 0 63 0 65 0 67 0 68 0 70 0;
 createNode animCurveTU -n "Head_Const_visibility1";
 	rename -uid "6E14EE56-4568-040F-E543-5393C396E7B1";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 25 0 28 1 29 1 30 1 31 1 32 1 33 1 34 1
-		 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1;
-	setAttr -s 17 ".kot[0:16]"  5 5 5 5 5 5 5 5 
-		5 5 5 5 5 5 5 5 5;
+	setAttr -s 42 ".ktv[0:41]"  0 0 25 0 28 1 29 1 30 1 31 1 32 1 33 1 34 1
+		 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1 45 1 46 1 47 1 48 1 49 1 50 1 51 1
+		 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1 62 1 63 1 65 1 67 1 68 1 70 1;
+	setAttr -s 42 ".kot[0:41]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+		5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5;
 createNode animCurveTA -n "Head_Const_rotateX1";
 	rename -uid "68D43C10-4439-F5DF-6716-648D3C0B04C4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 25 0 28 0 29 0 30 0 31 0 32 0 33 -0.95514544619732056
+	setAttr -s 42 ".ktv[0:41]"  0 0 25 0 28 0 29 0 30 0 31 0 32 0 33 -0.95514544619732056
 		 34 -0.10772229353811674 35 1.4437427507101028 36 2.2916614694424773 37 2.7141548055124236
 		 38 2.3531268848995568 39 1.1144174074940589 40 -0.56498428171073711 41 -1.9842165221518049
-		 42 -2.5625976896472955;
+		 42 -2.5625976896472955 43 -2.7047736405978107 44 -1.6657333069028244 45 0.45139408894005428
+		 46 1.473924800172878 47 2.6950124082806384 48 2.1359455317010272 49 0.30324052700041415
+		 50 -1.7237126306046089 51 -2.6853578523075976 52 -2.4347166737250778 53 -1.5345311120180072
+		 54 0.47923064031514501 55 1.8272667582806308 56 2.6682893894791371 57 2.400149162749508
+		 58 1.702708010233267 59 -0.27986662014770353 60 -1.7523826984926747 61 -2.3962826684848744
+		 62 -2.6896782042663787 63 -2.4420993666051243 65 -2.4420993666051243 67 -2.4420993666051243
+		 68 -2.4420993666051243 70 -2.4420993666051243;
 createNode animCurveTA -n "Head_Const_rotateY1";
 	rename -uid "F21C5C17-49E1-4830-D208-16AC2CE570D0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 25 0 28 0 29 0 30 0 31 0 32 0 33 -2.5514704899966834
+	setAttr -s 42 ".ktv[0:41]"  0 0 25 0 28 0 29 0 30 0 31 0 32 0 33 -2.5514704899966834
 		 34 -2.7221509846654088 35 -2.3105060594059657 36 -1.4734812523431171 37 -0.23474722775294993
 		 38 1.3731553107583558 39 2.4860721421877208 40 2.6650936856421863 41 1.867077915199624
-		 42 0.92485937637427029;
+		 42 0.92485937637427029 43 -0.32554513410168578 44 -2.1560017864409753 45 -2.6866510900222984
+		 46 -2.2913763077838776 47 -0.39840499396434054 48 1.6913791628727703 49 2.7073631036676886
+		 50 2.109942985376041 51 0.45903034281913208 52 -1.2226021036044228 53 -2.251250229637844
+		 54 -2.6818290553417037 55 -2.0209360218057149 56 -0.54968313264649948 57 1.2891693561907014
+		 58 2.1269270591158449 59 2.7098771983467147 60 2.0861959385305515 61 1.2963451292473074
+		 62 0.43297832738161568 63 -1.2077812376910277 65 -1.2077812376910277 67 -1.2077812376910277
+		 68 -1.2077812376910277 70 -1.2077812376910277;
 createNode animCurveTA -n "Head_Const_rotateZ1";
 	rename -uid "76815DF9-439E-3239-8047-4981C3782E18";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 0 25 0 28 0 29 -11.03656397660815 30 -25.550984644315488
+	setAttr -s 42 ".ktv[0:41]"  0 0 25 0 28 0 29 -11.03656397660815 30 -25.550984644315488
 		 31 -42.312724489276469 32 -63.385292951659885 33 -118.8057872778399 34 -137.07017673833431
 		 35 -171.34922968514852 36 -196.61395250704308 37 -224.39766898878921 38 -259.58625461851983
-		 39 -295.18278522537537 40 -331.31092089929899 41 -366.09581701484331 42 -389.50531480985057;
+		 39 -295.18278522537537 40 -331.31092089929899 41 -366.09581701484331 42 -389.50531480985057
+		 43 -416.19517519218726 44 -461.63305150530692 45 -508.87820808318656 46 -532.10098473783296
+		 47 -580.93420788180993 48 -627.69466273506248 49 -672.94394039977055 50 -718.59902063199775
+		 51 -759.64397176463922 52 -795.98529552283208 53 -825.04423159738235 54 -869.47259836160197
+		 55 -901.47165685956315 56 -937.70512606801378 57 -977.56235441985621 58 -1000.6435720248979
+		 59 -1045.2358183742483 60 -1079.3821288679837 61 -1100.9406368983953 62 -1120.1989854085598
+		 63 -1155.6371796135629 65 -1155.6371796135629 67 -1155.6371796135629 68 -1155.6371796135629
+		 70 -1155.6371796135629;
 createNode animCurveTU -n "Head_Const_scaleX1";
 	rename -uid "DDF302CB-44B8-66A0-6D92-69937D540885";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 1 25 1 28 1 29 1 30 1 31 1 32 1 33 1 34 1
-		 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1;
+	setAttr -s 42 ".ktv[0:41]"  0 1 25 1 28 1 29 1 30 1 31 1 32 1 33 1 34 1
+		 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1 45 1 46 1 47 1 48 1 49 1 50 1 51 1
+		 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1 62 1 63 1 65 1 67 1 68 1 70 1;
 createNode animCurveTU -n "Head_Const_scaleY1";
 	rename -uid "74D4BD3A-4730-CE35-C94E-728D0F19D1AB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 17 ".ktv[0:16]"  0 1 25 1 28 1 29 1 30 1 31 1 32 1 33 1 34 1
-		 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1;
+	setAttr -s 42 ".ktv[0:41]"  0 1 25 1 28 1 29 1 30 1 31 1 32 1 33 1 34 1
+		 35 1 36 1 37 1 38 1 39 1 40 1 41 1 42 1 43 1 44 1 45 1 46 1 47 1 48 1 49 1 50 1 51 1
+		 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1 62 1 63 1 65 1 67 1 68 1 70 1;
 createNode animCurveTU -n "Head_Const_scaleZ1";
 	rename -uid "9FCBC7AB-4816-13E1-18E1-B8BF96AA8FBA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 10 ".ktv[0:9]"  0 1 20.999999829931973 1 21 1 22 1 25 1
-		 27.999999659863946 1 27.999999829931973 1 28 1 35 1 38 1;
+	setAttr -s 35 ".ktv[0:34]"  0 1 20.999999829931973 1 21 1 22 1 25 1
+		 27.999999659863946 1 27.999999829931973 1 28 1 35 1 38 1 43 1 44 1 45 1 46 1 47 1
+		 48 1 49 1 50 1 51 1 52 1 53 1 54 1 55 1 56 1 57 1 58 1 59 1 60 1 61 1 62 1 63 1 65 1
+		 67 1 68 1 70 1;
 createNode animCurveTL -n "UpperArm_Const_translateX2";
 	rename -uid "4C08B172-41C9-B6AF-4C41-9988193FFC06";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 53 0 55 0 56 0 57 0 62 0 63 0;
 createNode animCurveTL -n "UpperArm_Const_translateY2";
 	rename -uid "37AF4559-4B70-398E-E9F2-1EB246273868";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 53 0 55 0 56 0 57 0 62 0 63 0;
 createNode animCurveTL -n "UpperArm_Const_translateZ2";
 	rename -uid "A3C065BF-42C4-A84B-B2EA-2F8D567E8D56";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 53 0 55 0 56 0 57 0 62 0 63 0;
 createNode animCurveTU -n "UpperArm_Const_visibility2";
 	rename -uid "AC1265E4-48AF-1FC7-1EC1-E882EF59C3AC";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 7 ".ktv[0:6]"  0 1 53 1 55 1 56 1 57 1 62 1 63 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTA -n "UpperArm_Const_rotateX2";
 	rename -uid "9F5332A6-455C-C9FB-1B8F-E8A7F6E25BC5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 53 0.068935434038506868 55 0.069196426885564544
+		 56 0.049771795434112864 57 0.035780418966299528 62 0.025072330889172118 63 -0.019825888544222191;
 createNode animCurveTA -n "UpperArm_Const_rotateY2";
 	rename -uid "3724D62F-48AF-005C-4A3A-EB875EE58F36";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 53 0.01804657245437415 55 -0.017018440979231421
+		 56 -0.050995506857715242 57 -0.061624141361439039 62 -0.066701957947668616 63 -0.068444919582732466;
 createNode animCurveTA -n "UpperArm_Const_rotateZ2";
 	rename -uid "3B8F330D-4626-1E9B-844E-17941B7166DD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 53 -6.8625212510351687 55 21.624987755143469
+		 56 53.503435281407683 57 67.667222869623529 62 77.207142093234239 63 113.96197944324321;
 createNode animCurveTU -n "UpperArm_Const_scaleX2";
 	rename -uid "2B7F73CD-40B8-F15F-2256-6C94A428A412";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr -s 7 ".ktv[0:6]"  0 1 53 1 55 1 56 1 57 1 62 1 63 1;
 createNode animCurveTU -n "UpperArm_Const_scaleY2";
 	rename -uid "FD7C7AE9-4933-9FF8-3835-71A94C1310F4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr -s 7 ".ktv[0:6]"  0 1 53 1 55 1 56 1 57 1 62 1 63 1;
 createNode animCurveTU -n "UpperArm_Const_scaleZ2";
 	rename -uid "346A0B07-405D-61AD-46A4-67894EF491D7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr -s 7 ".ktv[0:6]"  0 1 53 1 55 1 56 1 57 1 62 1 63 1;
 createNode animCurveTL -n "Lowerarm_Const_translateX1";
 	rename -uid "E220B610-4BA4-72F5-602D-BEB2268E31C9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 13 ".ktv[0:12]"  0 0 53 0 54 0 56 0 57 0 59 0 60 0 61 0 62 0
+		 63 0 73 0 79 0 83 0;
+	setAttr -s 13 ".kit[12]"  1;
+	setAttr -s 13 ".kot[12]"  1;
+	setAttr -s 13 ".kix[12]"  0.3104180728286528;
+	setAttr -s 13 ".kiy[12]"  -0.95060013678798994;
+	setAttr -s 13 ".kox[12]"  0.31041807403143701;
+	setAttr -s 13 ".koy[12]"  -0.95060013639522123;
 createNode animCurveTL -n "Lowerarm_Const_translateY1";
 	rename -uid "E5C86595-4812-A3BE-A82C-C699A860726A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 13 ".ktv[0:12]"  0 0 53 0 54 0 56 0 57 0 59 0 60 0 61 0 62 0
+		 63 0 73 0 79 0 83 0;
+	setAttr -s 13 ".kit[12]"  1;
+	setAttr -s 13 ".kot[12]"  1;
+	setAttr -s 13 ".kix[12]"  0.3104180728286528;
+	setAttr -s 13 ".kiy[12]"  -0.95060013678798994;
+	setAttr -s 13 ".kox[12]"  0.31041807403143701;
+	setAttr -s 13 ".koy[12]"  -0.95060013639522123;
 createNode animCurveTL -n "Lowerarm_Const_translateZ1";
 	rename -uid "A6BCA6D1-482C-E192-8EC5-BEBE743F98D0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 13 ".ktv[0:12]"  0 0 53 0 54 0 56 0 57 0 59 0 60 0 61 0 62 0
+		 63 0 73 0 79 0 83 0;
+	setAttr -s 13 ".kit[12]"  1;
+	setAttr -s 13 ".kot[12]"  1;
+	setAttr -s 13 ".kix[12]"  0.3104180728286528;
+	setAttr -s 13 ".kiy[12]"  -0.95060013678798994;
+	setAttr -s 13 ".kox[12]"  0.31041807403143701;
+	setAttr -s 13 ".koy[12]"  -0.95060013639522123;
 createNode animCurveTU -n "Lowerarm_Const_visibility1";
 	rename -uid "9CD20D21-44C0-7A6B-39D0-2F9EF3135C82";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 13 ".ktv[0:12]"  0 1 53 1 54 1 56 1 57 1 59 1 60 1 61 1 62 1
+		 63 1 73 1 79 1 83 1;
+	setAttr -s 13 ".kot[0:12]"  5 5 5 5 5 5 5 5 
+		5 5 5 5 5;
 createNode animCurveTA -n "Lowerarm_Const_rotateX1";
 	rename -uid "A1DB5002-4E31-6819-6571-73941B3418B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 13 ".ktv[0:12]"  0 0 53 0 54 0 56 0 57 0 59 0 60 0 61 0 62 0
+		 63 0 73 0 79 0 83 0;
+	setAttr -s 13 ".kit[12]"  1;
+	setAttr -s 13 ".kot[12]"  1;
+	setAttr -s 13 ".kix[12]"  0.99857472975126382;
+	setAttr -s 13 ".kiy[12]"  -0.053371425896170235;
+	setAttr -s 13 ".kox[12]"  0.99857472968668637;
+	setAttr -s 13 ".koy[12]"  -0.053371427104408398;
 createNode animCurveTA -n "Lowerarm_Const_rotateY1";
 	rename -uid "3E79126D-4F75-F628-C82D-8ABA934CE9F9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 13 ".ktv[0:12]"  0 0 53 0 54 0 56 0 57 0 59 0 60 0 61 0 62 0
+		 63 0 73 0 79 0 83 0;
+	setAttr -s 13 ".kit[12]"  1;
+	setAttr -s 13 ".kot[12]"  1;
+	setAttr -s 13 ".kix[12]"  0.99857472975126382;
+	setAttr -s 13 ".kiy[12]"  -0.053371425896170235;
+	setAttr -s 13 ".kox[12]"  0.99857472968668637;
+	setAttr -s 13 ".koy[12]"  -0.053371427104408398;
 createNode animCurveTA -n "Lowerarm_Const_rotateZ1";
 	rename -uid "A7F494DC-4F03-6F12-6DE6-AD86AB8ABAE8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 13 ".ktv[0:12]"  0 0 53 19.89594350216624 54 85.422191792983284
+		 56 135.68324538136309 57 159.34453789941509 59 185.37393042258347 60 193.85505283007839
+		 61 213.48661294640439 62 220.8839967761599 63 225.20224958709517 73 225.20224958709517
+		 79 225.20224958709517 83 100.99387574440125;
+	setAttr -s 13 ".kit[12]"  1;
+	setAttr -s 13 ".kot[12]"  1;
+	setAttr -s 13 ".kix[12]"  0.99767027689377374;
+	setAttr -s 13 ".kiy[12]"  -0.068220367946095761;
+	setAttr -s 13 ".kox[12]"  0.99767027680464149;
+	setAttr -s 13 ".koy[12]"  -0.068220369249587368;
 createNode animCurveTU -n "Lowerarm_Const_scaleX1";
 	rename -uid "A1D60382-4358-F592-BC91-07B90EF4646D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr -s 13 ".ktv[0:12]"  0 1 53 1 54 1 56 1 57 1 59 1 60 1 61 1 62 1
+		 63 1 73 1 79 1 83 1;
+	setAttr -s 13 ".kit[12]"  1;
+	setAttr -s 13 ".kot[12]"  1;
+	setAttr -s 13 ".kix[12]"  0.16736395203005755;
+	setAttr -s 13 ".kiy[12]"  -0.98589518081836702;
+	setAttr -s 13 ".kox[12]"  0.16736394020451861;
+	setAttr -s 13 ".koy[12]"  -0.98589518282585109;
 createNode animCurveTU -n "Lowerarm_Const_scaleY1";
 	rename -uid "7455CED0-4E02-DCD9-5EE8-DC92599A5E35";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr -s 13 ".ktv[0:12]"  0 1 53 1 54 1 56 1 57 1 59 1 60 1 61 1 62 1
+		 63 1 73 1 79 1 83 1;
+	setAttr -s 13 ".kit[12]"  1;
+	setAttr -s 13 ".kot[12]"  1;
+	setAttr -s 13 ".kix[12]"  0.16736395203005755;
+	setAttr -s 13 ".kiy[12]"  -0.98589518081836702;
+	setAttr -s 13 ".kox[12]"  0.16736394020451861;
+	setAttr -s 13 ".koy[12]"  -0.98589518282585109;
 createNode animCurveTU -n "Lowerarm_Const_scaleZ1";
 	rename -uid "92E733F9-4F03-FAB2-23DC-038E307D300C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr -s 13 ".ktv[0:12]"  0 1 53 1 54 1 56 1 57 1 59 1 60 1 61 1 62 1
+		 63 1 73 1 79 1 83 1;
+	setAttr -s 13 ".kit[12]"  1;
+	setAttr -s 13 ".kot[12]"  1;
+	setAttr -s 13 ".kix[12]"  0.16736395203005755;
+	setAttr -s 13 ".kiy[12]"  -0.98589518081836702;
+	setAttr -s 13 ".kox[12]"  0.16736394020451861;
+	setAttr -s 13 ".koy[12]"  -0.98589518282585109;
 createNode animCurveTL -n "Base_Const_translateX2";
 	rename -uid "0A82F90E-4C46-2D38-A684-EA937AA470CD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 54 0 58 0 63 0 64 0 76 0 82 0;
 createNode animCurveTL -n "Base_Const_translateY2";
 	rename -uid "50809006-4180-BB09-42E2-ECBF5A8D1753";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 54 0 58 0 63 0 64 0 76 0 82 0;
 createNode animCurveTL -n "Base_Const_translateZ2";
 	rename -uid "96BDC156-4812-BB89-DFA1-5DBC709CA2D7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 54 0 58 0 63 0 64 0 76 0 82 0;
 createNode animCurveTU -n "Base_Const_visibility2";
 	rename -uid "6C559CC4-4F33-E2F3-C05C-B288BA2B1B71";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
-	setAttr ".kot[0]"  5;
+	setAttr -s 7 ".ktv[0:6]"  0 1 54 1 58 1 63 1 64 1 76 1 82 1;
+	setAttr -s 7 ".kot[0:6]"  5 5 5 5 5 5 5;
 createNode animCurveTA -n "Base_Const_rotateX2";
 	rename -uid "A2420E2D-4F29-313F-F952-11BAE5EB060E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 54 0 58 0 63 0 64 0 76 0 82 0;
 createNode animCurveTA -n "Base_Const_rotateY2";
 	rename -uid "91BF337F-4B0B-E2D8-B0DE-78A60DF655D7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 54 0 58 0 63 0 64 0 76 0 82 0;
 createNode animCurveTA -n "Base_Const_rotateZ2";
 	rename -uid "9CE8ABD9-42A7-17E7-234F-5598DDDDD132";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 0;
+	setAttr -s 7 ".ktv[0:6]"  0 0 54 14.411136816538958 58 -28.918968913929007
+		 63 -11.6181220932882 64 -34.341050259363442 76 -11.6181220932882 82 28.006009859674553;
 createNode animCurveTU -n "Base_Const_scaleX2";
 	rename -uid "A602D6EC-4D87-73CC-4F74-5EA4A3AA38F1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr -s 7 ".ktv[0:6]"  0 1 54 1 58 1 63 1 64 1 76 1 82 1;
 createNode animCurveTU -n "Base_Const_scaleY2";
 	rename -uid "4EF9DCB8-4566-96D2-C3F6-19B89F06C352";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr -s 7 ".ktv[0:6]"  0 1 54 1 58 1 63 1 64 1 76 1 82 1;
 createNode animCurveTU -n "Base_Const_scaleZ2";
 	rename -uid "DC67979F-4FAE-0D57-E7F2-ACA22EA863EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  0 1;
+	setAttr -s 7 ".ktv[0:6]"  0 1 54 1 58 1 63 1 64 1 76 1 82 1;
 createNode animCurveTL -n "Base_Const_translateX3";
 	rename -uid "12BBAE9C-4BE1-CF02-D6EC-CE8A77EFD715";
 	setAttr ".tan" 18;
@@ -1484,51 +1647,21 @@ createNode animCurveTU -n "Shade_Const_scaleZ1";
 	setAttr ".wgt" no;
 	setAttr -s 11 ".ktv[0:10]"  0 1 4 1 8 1 11 1 12 1 13 1 14 1 15 1 16 1
 		 22 1 25 1;
-createNode animCurveTU -n "head_geo_visibility";
-	rename -uid "23A03A4F-4E76-A1CA-5ADC-639305FF9015";
+createNode animCurveTU -n "base_geo_visibility";
+	rename -uid "B5C9DB8E-47FA-A794-B273-ED90D7523D02";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 0 28 1;
-	setAttr -s 2 ".kot[0:1]"  5 5;
-createNode pairBlend -n "pairBlend1";
-	rename -uid "803CCFE0-446B-5087-B96B-0CB52D34229C";
-createNode animCurveTL -n "pairBlend1_inTranslateX1";
-	rename -uid "744E7EFB-4971-DB66-4F64-7EBC6CBD9EED";
-	setAttr ".tan" 18;
+	setAttr -s 3 ".ktv[0:2]"  0 1 25 1 26 0;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
+createNode animCurveTU -n "head_geo_visibility";
+	rename -uid "1D49AFF1-485E-EF2D-D132-B1968AD78C55";
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 1.1555247657934569 28 1.1555247657934569;
-createNode animCurveTL -n "pairBlend1_inTranslateY1";
-	rename -uid "073681D2-4288-5BEB-186D-BB837B3E7820";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 20.953478343591264 28 20.953478343591264;
-createNode animCurveTL -n "pairBlend1_inTranslateZ1";
-	rename -uid "D37AB87F-4DC6-E301-DF69-C78E84A829BD";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -1.7347234759768071e-18 28 -1.7347234759768071e-18;
-createNode animCurveTA -n "pairBlend1_inRotateX1";
-	rename -uid "8771E1F6-4F72-AF52-E61C-6997E58EBF85";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -9.3672305172685601e-15 28 -9.3672305172685601e-15;
-createNode animCurveTA -n "pairBlend1_inRotateY1";
-	rename -uid "696A5E66-4B54-E247-C05E-6E8810D23C00";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -9.0584888122993249e-12 28 -9.0584888122993249e-12;
-createNode animCurveTA -n "pairBlend1_inRotateZ1";
-	rename -uid "789A00B0-4D19-7343-79C1-E795B13EBD53";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  0 -9.9392333794994417e-17 28 -9.9392333794994417e-17;
-createNode animCurveTU -n "head_geo_blendParent1";
-	rename -uid "4467043B-43AD-BF5F-E5C7-BF8A0BDA301C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr ".ktv[0]"  28 0;
+	setAttr -s 3 ".ktv[0:2]"  0 0 25 0 26 1;
+	setAttr -s 3 ".kot[0:2]"  5 5 5;
 select -ne :time1;
-	setAttr ".o" 0;
+	setAttr ".o" 95;
+	setAttr ".unw" 95;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -1557,117 +1690,104 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "pairBlend1.otx" "Rhett_Wimmer_Lamp_from_HeadRN.phl[1]";
-connectAttr "pairBlend1.oty" "Rhett_Wimmer_Lamp_from_HeadRN.phl[2]";
-connectAttr "pairBlend1.otz" "Rhett_Wimmer_Lamp_from_HeadRN.phl[3]";
-connectAttr "pairBlend1.orx" "Rhett_Wimmer_Lamp_from_HeadRN.phl[4]";
-connectAttr "pairBlend1.ory" "Rhett_Wimmer_Lamp_from_HeadRN.phl[5]";
-connectAttr "pairBlend1.orz" "Rhett_Wimmer_Lamp_from_HeadRN.phl[6]";
-connectAttr "head_geo_visibility.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[7]";
-connectAttr "Rhett_Wimmer_Lamp_from_HeadRN.phl[8]" "pairBlend1.w";
-connectAttr "head_geo_blendParent1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[9]";
-connectAttr "Rhett_Wimmer_Lamp_from_HeadRN.phl[10]" "pairBlend1.itx2";
-connectAttr "Rhett_Wimmer_Lamp_from_HeadRN.phl[11]" "pairBlend1.ity2";
-connectAttr "Rhett_Wimmer_Lamp_from_HeadRN.phl[12]" "pairBlend1.itz2";
-connectAttr "Rhett_Wimmer_Lamp_from_HeadRN.phl[13]" "pairBlend1.irx2";
-connectAttr "Rhett_Wimmer_Lamp_from_HeadRN.phl[14]" "pairBlend1.iry2";
-connectAttr "Rhett_Wimmer_Lamp_from_HeadRN.phl[15]" "pairBlend1.irz2";
-connectAttr "Head_Const_translateX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[16]";
-connectAttr "Head_Const_translateY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[17]";
-connectAttr "Head_Const_translateZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[18]";
-connectAttr "Head_Const_rotateX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[19]";
-connectAttr "Head_Const_rotateY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[20]";
-connectAttr "Head_Const_rotateZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[21]";
-connectAttr "Head_Const_scaleX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[22]";
-connectAttr "Head_Const_scaleY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[23]";
-connectAttr "Head_Const_scaleZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[24]";
-connectAttr "Head_Const_visibility1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[25]";
-connectAttr "UpperArm_Const_translateY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[26]"
+connectAttr "head_geo_visibility.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[1]";
+connectAttr "Head_Const_translateX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[2]";
+connectAttr "Head_Const_translateY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[3]";
+connectAttr "Head_Const_translateZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[4]";
+connectAttr "Head_Const_rotateX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[5]";
+connectAttr "Head_Const_rotateY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[6]";
+connectAttr "Head_Const_rotateZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[7]";
+connectAttr "Head_Const_scaleX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[8]";
+connectAttr "Head_Const_scaleY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[9]";
+connectAttr "Head_Const_scaleZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[10]";
+connectAttr "Head_Const_visibility1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[11]";
+connectAttr "UpperArm_Const_translateY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[12]"
 		;
-connectAttr "UpperArm_Const_translateX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[27]"
+connectAttr "UpperArm_Const_translateX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[13]"
 		;
-connectAttr "UpperArm_Const_translateZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[28]"
+connectAttr "UpperArm_Const_translateZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[14]"
 		;
-connectAttr "UpperArm_Const_rotateZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[29]";
-connectAttr "UpperArm_Const_rotateX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[30]";
-connectAttr "UpperArm_Const_rotateY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[31]";
-connectAttr "UpperArm_Const_scaleX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[32]";
-connectAttr "UpperArm_Const_scaleY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[33]";
-connectAttr "UpperArm_Const_scaleZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[34]";
-connectAttr "UpperArm_Const_visibility2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[35]"
+connectAttr "UpperArm_Const_rotateZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[15]";
+connectAttr "UpperArm_Const_rotateX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[16]";
+connectAttr "UpperArm_Const_rotateY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[17]";
+connectAttr "UpperArm_Const_scaleX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[18]";
+connectAttr "UpperArm_Const_scaleY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[19]";
+connectAttr "UpperArm_Const_scaleZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[20]";
+connectAttr "UpperArm_Const_visibility2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[21]"
 		;
-connectAttr "Lowerarm_Const_translateX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[36]"
+connectAttr "Lowerarm_Const_translateX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[22]"
 		;
-connectAttr "Lowerarm_Const_translateY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[37]"
+connectAttr "Lowerarm_Const_translateY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[23]"
 		;
-connectAttr "Lowerarm_Const_translateZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[38]"
+connectAttr "Lowerarm_Const_translateZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[24]"
 		;
-connectAttr "Lowerarm_Const_rotateX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[39]";
-connectAttr "Lowerarm_Const_rotateY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[40]";
-connectAttr "Lowerarm_Const_rotateZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[41]";
-connectAttr "Lowerarm_Const_scaleX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[42]";
-connectAttr "Lowerarm_Const_scaleY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[43]";
-connectAttr "Lowerarm_Const_scaleZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[44]";
-connectAttr "Lowerarm_Const_visibility1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[45]"
+connectAttr "Lowerarm_Const_rotateX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[25]";
+connectAttr "Lowerarm_Const_rotateY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[26]";
+connectAttr "Lowerarm_Const_rotateZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[27]";
+connectAttr "Lowerarm_Const_scaleX1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[28]";
+connectAttr "Lowerarm_Const_scaleY1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[29]";
+connectAttr "Lowerarm_Const_scaleZ1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[30]";
+connectAttr "Lowerarm_Const_visibility1.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[31]"
 		;
-connectAttr "Base_Const_translateX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[46]";
-connectAttr "Base_Const_translateY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[47]";
-connectAttr "Base_Const_translateZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[48]";
-connectAttr "Base_Const_rotateX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[49]";
-connectAttr "Base_Const_rotateY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[50]";
-connectAttr "Base_Const_rotateZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[51]";
-connectAttr "Base_Const_scaleX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[52]";
-connectAttr "Base_Const_scaleY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[53]";
-connectAttr "Base_Const_scaleZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[54]";
-connectAttr "Base_Const_visibility2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[55]";
-connectAttr "Base_Const_translateX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[1]";
-connectAttr "Base_Const_translateY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[2]";
-connectAttr "Base_Const_translateZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[3]";
-connectAttr "Base_Const_rotateX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[4]";
-connectAttr "Base_Const_rotateY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[5]";
-connectAttr "Base_Const_rotateZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[6]";
-connectAttr "Base_Const_scaleX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[7]";
-connectAttr "Base_Const_scaleY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[8]";
-connectAttr "Base_Const_scaleZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[9]";
-connectAttr "Base_Const_visibility3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[10]";
-connectAttr "LowerArm_Const_translateX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[11]"
+connectAttr "Base_Const_translateX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[32]";
+connectAttr "Base_Const_translateY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[33]";
+connectAttr "Base_Const_translateZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[34]";
+connectAttr "Base_Const_rotateX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[35]";
+connectAttr "Base_Const_rotateY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[36]";
+connectAttr "Base_Const_rotateZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[37]";
+connectAttr "Base_Const_scaleX2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[38]";
+connectAttr "Base_Const_scaleY2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[39]";
+connectAttr "Base_Const_scaleZ2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[40]";
+connectAttr "Base_Const_visibility2.o" "Rhett_Wimmer_Lamp_from_HeadRN.phl[41]";
+connectAttr "base_geo_visibility.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[1]";
+connectAttr "Base_Const_translateX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[2]";
+connectAttr "Base_Const_translateY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[3]";
+connectAttr "Base_Const_translateZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[4]";
+connectAttr "Base_Const_rotateX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[5]";
+connectAttr "Base_Const_rotateY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[6]";
+connectAttr "Base_Const_rotateZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[7]";
+connectAttr "Base_Const_scaleX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[8]";
+connectAttr "Base_Const_scaleY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[9]";
+connectAttr "Base_Const_scaleZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[10]";
+connectAttr "Base_Const_visibility3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[11]";
+connectAttr "LowerArm_Const_translateX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[12]"
 		;
-connectAttr "LowerArm_Const_translateY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[12]"
+connectAttr "LowerArm_Const_translateY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[13]"
 		;
-connectAttr "LowerArm_Const_translateZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[13]"
+connectAttr "LowerArm_Const_translateZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[14]"
 		;
-connectAttr "LowerArm_Const_rotateX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[14]";
-connectAttr "LowerArm_Const_rotateY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[15]";
-connectAttr "LowerArm_Const_rotateZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[16]";
-connectAttr "LowerArm_Const_scaleX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[17]";
-connectAttr "LowerArm_Const_scaleY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[18]";
-connectAttr "LowerArm_Const_scaleZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[19]";
-connectAttr "LowerArm_Const_visibility1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[20]"
+connectAttr "LowerArm_Const_rotateX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[15]";
+connectAttr "LowerArm_Const_rotateY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[16]";
+connectAttr "LowerArm_Const_rotateZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[17]";
+connectAttr "LowerArm_Const_scaleX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[18]";
+connectAttr "LowerArm_Const_scaleY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[19]";
+connectAttr "LowerArm_Const_scaleZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[20]";
+connectAttr "LowerArm_Const_visibility1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[21]"
 		;
-connectAttr "UpperArm_Const_translateX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[21]"
+connectAttr "UpperArm_Const_translateX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[22]"
 		;
-connectAttr "UpperArm_Const_translateY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[22]"
+connectAttr "UpperArm_Const_translateY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[23]"
 		;
-connectAttr "UpperArm_Const_translateZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[23]"
+connectAttr "UpperArm_Const_translateZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[24]"
 		;
-connectAttr "UpperArm_Const_rotateX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[24]";
-connectAttr "UpperArm_Const_rotateY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[25]";
-connectAttr "UpperArm_Const_rotateZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[26]";
-connectAttr "UpperArm_Const_scaleX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[27]";
-connectAttr "UpperArm_Const_scaleY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[28]";
-connectAttr "UpperArm_Const_scaleZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[29]";
-connectAttr "UpperArm_Const_visibility3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[30]"
+connectAttr "UpperArm_Const_rotateX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[25]";
+connectAttr "UpperArm_Const_rotateY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[26]";
+connectAttr "UpperArm_Const_rotateZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[27]";
+connectAttr "UpperArm_Const_scaleX3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[28]";
+connectAttr "UpperArm_Const_scaleY3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[29]";
+connectAttr "UpperArm_Const_scaleZ3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[30]";
+connectAttr "UpperArm_Const_visibility3.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[31]"
 		;
-connectAttr "Shade_Const_translateX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[31]";
-connectAttr "Shade_Const_translateY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[32]";
-connectAttr "Shade_Const_translateZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[33]";
-connectAttr "Shade_Const_rotateX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[34]";
-connectAttr "Shade_Const_rotateY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[35]";
-connectAttr "Shade_Const_rotateZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[36]";
-connectAttr "Shade_Const_scaleX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[37]";
-connectAttr "Shade_Const_scaleY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[38]";
-connectAttr "Shade_Const_scaleZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[39]";
-connectAttr "Shade_Const_visibility1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[40]";
+connectAttr "Shade_Const_translateX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[32]";
+connectAttr "Shade_Const_translateY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[33]";
+connectAttr "Shade_Const_translateZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[34]";
+connectAttr "Shade_Const_rotateX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[35]";
+connectAttr "Shade_Const_rotateY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[36]";
+connectAttr "Shade_Const_rotateZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[37]";
+connectAttr "Shade_Const_scaleX1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[38]";
+connectAttr "Shade_Const_scaleY1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[39]";
+connectAttr "Shade_Const_scaleZ1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[40]";
+connectAttr "Shade_Const_visibility1.o" "Rhett_Wimmer_Lamp_from_BaseRN.phl[41]";
 connectAttr "polyCylinder1.out" "pCylinderShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -1675,12 +1795,6 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "pairBlend1_inTranslateX1.o" "pairBlend1.itx1";
-connectAttr "pairBlend1_inTranslateY1.o" "pairBlend1.ity1";
-connectAttr "pairBlend1_inTranslateZ1.o" "pairBlend1.itz1";
-connectAttr "pairBlend1_inRotateX1.o" "pairBlend1.irx1";
-connectAttr "pairBlend1_inRotateY1.o" "pairBlend1.iry1";
-connectAttr "pairBlend1_inRotateZ1.o" "pairBlend1.irz1";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "pCylinderShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of LampOnPole.ma
