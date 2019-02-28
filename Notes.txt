@@ -54,3 +54,18 @@ _________
 Turn off visibility of lamp if you want to make him do a walk up
 
 Project window > New > 
+
+
+
+
+
+
+_______
+IK 2-28-2019
+
+Add prefered angle on elbow, use 5. Do this when creating the IK handle, or else it wont work
+Only have one value in joint oirent for elbow
+
+Create IK handle, click root then tip
+
+Add nurb, put IK handle in the nurb to control the root
