@@ -69,3 +69,19 @@ Only have one value in joint oirent for elbow
 Create IK handle, click root then tip
 
 Add nurb, put IK handle in the nurb to control the root
+
+
+_________
+IK 3/5/2019
+
+- Create Joints
+- Orient Joints (Elbow should only have one value) (Elbow: Value in Z only. 0 in X and Y)
+- Prefered Angle
+- IK Handle
+- Pole Vector (Direction of "Elbow")
+- Controls / Groups
+	- Position/ Orientation
+
+
+Match translations to set constrains
+
