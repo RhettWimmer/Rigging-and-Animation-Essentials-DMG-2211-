@@ -85,3 +85,13 @@ IK 3/5/2019
 
 Match translations to set constrains
 
+________
+IK 3/7/2019
+
+To make it all move
+GRP
+|_BaseCtrl
+	|_MasterIK
+		|_IKCtr
+		|_RootCtrl
+		|_Pole Vector Ctrl
