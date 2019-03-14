@@ -95,3 +95,22 @@ GRP
 		|_IKCtr
 		|_RootCtrl
 		|_Pole Vector Ctrl
+
+_____
+IK 3/14
+
+orient constraint for wrist to rotate hand
+
+Modify > Convert > Nurbs to polygons
+
+Root JNT
+	|_ Spine JNT
+	|_ Hip JNT
+
+Parent constraint spine to base ctrl
+
+Behavior flip for human
+
+-Create joints
+-Orient Joints
+-Mirror joint
