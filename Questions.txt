@@ -1,3 +1,20 @@
+Current Questions:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Past Questions:
 How to link geometry to joints
 	contrain geometry to joints
 _______________________________________
