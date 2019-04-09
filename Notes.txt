@@ -114,3 +114,56 @@ Behavior flip for human
 -Create joints
 -Orient Joints
 -Mirror joint
+
+
+IK/FK
+_______
+Children with two parents share movememnt 50/50
+
+
+Parent cotnrain options, turn off maintain offset
+
+
+can middle click drag things into node editor
+1 2 and 3 control size of node
+Hypershade
+
+
+Reverse:
+	1 - input = output
+
+Add Attribute on a control
+hit tab in node editor and type reverse
+
+
+1 - follow cube
+
+	cube w > 1
+	shpere w > 0
+
+0 - follow Sphere
+
+	cube w > 0
+	Shpere w > 1
+
+
+How to do this
+	Make FK
+	Make IK
+	Make RK 
+Parent all under the RK Joints
+
+	Note: Contrains have priority over heirachy
+	So Elbow wont follow shoulder
+Control called IKFK_Switch
+	Make it a float with min = 0, max= 1
+Label switch IKFK match with 0 and 1 (Not necesary)
+
+IK = 0, FK 0 (Not nesscary, but makes it easier to remember)
+
+On the Joints
+	Control into node editor
+	Take a constraint
+	take switch noodle to FK weight W0
+	add reverse
+	To input X to output X to W1
