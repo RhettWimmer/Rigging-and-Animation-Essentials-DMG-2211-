@@ -167,3 +167,10 @@ On the Joints
 	take switch noodle to FK weight W0
 	add reverse
 	To input X to output X to W1
+
+
+
+
+4/11
+__________
+Game exporter for animation
