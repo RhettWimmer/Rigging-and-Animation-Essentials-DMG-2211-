@@ -1,3 +1,10 @@
 How to setup IK controls
 
 Offset elbow
+	duplicate the node, group it and delete extranode
+
+
+Tip has IKhandler parented right under it
+
+Root is just parent constrained to jnt
+
