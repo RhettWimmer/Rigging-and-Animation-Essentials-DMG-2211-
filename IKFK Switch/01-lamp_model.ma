@@ -1,6 +1,6 @@
 //Maya ASCII 2018 scene
 //Name: 01-lamp_model.ma
-//Last modified: Thu, Apr 11, 2019 10:12:00 AM
+//Last modified: Thu, Apr 11, 2019 10:22:49 AM
 //Codeset: 1252
 requires maya "2018";
 currentUnit -l centimeter -a degree -t film;
@@ -13,18 +13,18 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "B1FA3E2D-49C2-1477-C333-ECB552D89E46";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 9.5039720121621514 23.53054168519148 43.868565782799067 ;
-	setAttr ".r" -type "double3" -17.73835271037704 -1075.3999999999771 -1.9942704634687114e-16 ;
+	setAttr ".t" -type "double3" 0.41435683253543321 24.716934216358695 8.056953315139312 ;
+	setAttr ".r" -type "double3" -11.738352710369121 -1072.1999999999821 1.0032051520641586e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3A3A9519-4606-A2EE-4319-C79D1945B5E0";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 53.972129569777188;
+	setAttr ".coi" 7.1299195266347279;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -1.1946200132370011 23.353960037231445 -0.0088138356804851048 ;
+	setAttr ".tp" -type "double3" 11.506677627563477 12.813642501831055 -0.0088140666484836094 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "8BD51A22-43B0-8BE0-E678-51B9422D81F5";
@@ -2493,7 +2493,7 @@ createNode joint -n "Base_Jnt_IK";
 createNode joint -n "Lower_arm_Jnt" -p "Base_Jnt_IK";
 	rename -uid "94C523EC-43B5-FEEA-015B-919388E5F6D4";
 	setAttr ".t" -type "double3" 1.8142037391662598 4.0175474431556496e-16 0.0088140368461608887 ;
-	setAttr ".r" -type "double3" -4.9726979664308461e-06 2.574203094788002e-05 -2.4062027136568379e-08 ;
+	setAttr ".r" -type "double3" -1.6103122743778569e-05 3.8696366893504398e-05 -2.4026046220650916e-08 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -2502,7 +2502,7 @@ createNode joint -n "Lower_arm_Jnt" -p "Base_Jnt_IK";
 createNode joint -n "Upper_arm_Jnt" -p "|Base_Jnt_IK|Lower_arm_Jnt";
 	rename -uid "E0DA5223-450B-9957-7D35-2B87B86A8FDD";
 	setAttr ".t" -type "double3" 15.240602299159541 0.34124353738355229 2.9802323796290775e-08 ;
-	setAttr ".r" -type "double3" -7.4697427895930344e-07 -1.6646136777636461e-05 4.3920655696920788e-08 ;
+	setAttr ".r" -type "double3" -7.4697427895929835e-07 -1.6646136777636346e-05 4.3920622301096633e-08 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
@@ -2516,7 +2516,7 @@ createNode joint -n "Base_Jnt" -p "|Base_Jnt_IK|Lower_arm_Jnt|Upper_arm_Jnt";
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
 createNode ikEffector -n "effector1" -p "|Base_Jnt_IK|Lower_arm_Jnt|Upper_arm_Jnt";
-	rename -uid "5D396DFD-4EC7-EAFB-4F01-1880FB4F588B";
+	rename -uid "742007A2-4EA3-0540-F576-D48891CD5B44";
 	setAttr ".v" no;
 	setAttr ".hd" yes;
 createNode transform -n "Controls_IK";
@@ -2552,26 +2552,32 @@ createNode transform -n "Upper_arm_Ctrl_Grp" -p "Controls_IK";
 	setAttr ".t" -type "double3" 11.506677627563477 12.813642501831055 -0.0088140666484832764 ;
 	setAttr ".r" -type "double3" 0 180 -42.510447078000851 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 1 ;
-createNode transform -n "Upper_arm_Ctrl" -p "|Controls_IK|Upper_arm_Ctrl_Grp";
-	rename -uid "13B9A855-44F9-7228-3395-C99D289E25AF";
-createNode nurbsCurve -n "Upper_arm_CtrlShape" -p "|Controls_IK|Upper_arm_Ctrl_Grp|Upper_arm_Ctrl";
-	rename -uid "4CF43658-47AF-6F30-67EC-DF8263064D78";
+createNode transform -n "Upper_arm_Ctrl_Grp1" -p "|Controls_IK|Upper_arm_Ctrl_Grp";
+	rename -uid "E206ECFC-4E7B-9529-52D7-EFA72BA56E62";
+	setAttr ".t" -type "double3" -8.3266726846886741e-17 0 0 ;
+	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1 ;
+createNode transform -n "Upper_arm_Ctrl" -p "Upper_arm_Ctrl_Grp1";
+	rename -uid "27661624-4616-41B6-4D2F-0A828A2E901A";
+	setAttr ".rp" -type "double3" -2.8915827697921426 2.6506175389761282 3.5561831257524545e-16 ;
+	setAttr ".sp" -type "double3" -2.8915827697921426 2.6506175389761282 3.5561831257524545e-16 ;
+createNode nurbsCurve -n "Upper_arm_CtrlShape" -p "|Controls_IK|Upper_arm_Ctrl_Grp|Upper_arm_Ctrl_Grp1|Upper_arm_Ctrl";
+	rename -uid "D09C8C4D-492E-A0C1-C32A-90BFEFE8D1A1";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
 		3 8 2 no 3
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
-		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
-		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
-		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
-		-1.1081941875543881 3.5177356190060272e-33 -5.7448982375248304e-17
-		-0.78361162489122449 -4.7982373409884725e-17 0.78361162489122449
-		-1.1100856969603225e-16 -6.7857323231109171e-17 1.1081941875543884
-		0.78361162489122449 -4.7982373409884719e-17 0.78361162489122438
-		1.1081941875543881 -9.2536792101100989e-33 1.511240500779959e-16
-		0.78361162489122449 4.7982373409884731e-17 -0.7836116248912246
-		6.7857323231109122e-17 6.7857323231109122e-17 -1.1081941875543877
-		-0.78361162489122449 4.7982373409884719e-17 -0.78361162489122438
+		-2.3878869265057254 3.250898869787481 -0.78361162489122427
+		-2.8915827697921408 2.6506175389761255 -1.1081941875543873
+		-3.3952786130785562 2.05033620816477 -0.78361162489122405
+		-3.6039162626787422 1.801691539703336 2.9840249945028698e-16
+		-3.3952786130785562 2.05033620816477 0.78361162489122482
+		-2.8915827697921408 2.6506175389761255 1.1081941875543888
+		-2.3878869265057254 3.250898869787481 0.78361162489122471
+		-2.1792492769055394 3.4995435382489148 5.0697553190353125e-16
+		-2.3878869265057254 3.250898869787481 -0.78361162489122427
+		-2.8915827697921408 2.6506175389761255 -1.1081941875543873
+		-3.3952786130785562 2.05033620816477 -0.78361162489122405
 		;
 createNode transform -n "Lower_arm_Ctrl_Grp" -p "Controls_IK";
 	rename -uid "3ED60841-4137-86F2-BAAA-1CBEC5007744";
@@ -2625,9 +2631,9 @@ createNode nurbsCurve -n "Base_CtrlShape" -p "|Controls_IK|Base_Ctrl_Grp|Base_Ct
 		-5.0681455002124371 3.1033440822241111e-16 -5.0681455002124363
 		;
 createNode ikHandle -n "ikHandle1";
-	rename -uid "A7CDE231-4AD0-5F25-7215-F8B63EAAD963";
-	setAttr ".t" -type "double3" -1.1946200132352054 23.353960037231612 -0.0088142035130962006 ;
-	setAttr ".pv" -type "double3" 1.9887574465318081 0.21176359192031746 1.1349261507898276e-06 ;
+	rename -uid "5869858E-460F-8B88-5C18-87BAFD2D21A3";
+	setAttr ".t" -type "double3" -1.1946200132328872 23.353960037231744 -0.0088143880552571056 ;
+	setAttr ".pv" -type "double3" 1.9887573721463467 0.21176429049862155 1.7801485799992709e-06 ;
 	setAttr ".roc" yes;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "78463B6B-46CC-4049-AC32-B9AB26788953";
@@ -3055,6 +3061,7 @@ connectAttr "|Base_Jnt_IK|Lower_arm_Jnt|Upper_arm_Jnt|Base_Jnt.tz" "effector1.tz
 connectAttr "IKControls.di" "Controls_IK.do";
 connectAttr "IKControls.di" "|Controls_IK|Head_Ctrl_Grp.do";
 connectAttr "IKControls.di" "|Controls_IK|Upper_arm_Ctrl_Grp.do";
+connectAttr "IKControls.di" "Upper_arm_Ctrl_Grp1.do";
 connectAttr "IKControls.di" "|Controls_IK|Lower_arm_Ctrl_Grp.do";
 connectAttr "IKControls.di" "|Controls_IK|Base_Ctrl_Grp.do";
 connectAttr "|Base_Jnt_IK|Lower_arm_Jnt.msg" "ikHandle1.hsj";
