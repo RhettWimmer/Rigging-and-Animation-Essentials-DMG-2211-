@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: 01-lamp_model.ma
-//Last modified: Sun, Apr 14, 2019 01:13:28 AM
+//Last modified: Wed, Apr 17, 2019 09:55:43 PM
 //Codeset: 1252
 requires maya "2019";
 currentUnit -l centimeter -a degree -t film;
@@ -13,18 +13,18 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "B1FA3E2D-49C2-1477-C333-ECB552D89E46";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -16.933008759332626 38.596664147834304 -82.723961064757276 ;
-	setAttr ".r" -type "double3" 340.46164728914937 -1607.3999999998673 0 ;
+	setAttr ".t" -type "double3" 11.551236087669977 13.591037847675196 -51.148039672491073 ;
+	setAttr ".r" -type "double3" 357.26164728915342 -1995.7999999996382 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3A3A9519-4606-A2EE-4319-C79D1945B5E0";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 91.523017229957262;
+	setAttr ".coi" 54.667369371093265;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0 2.8142037391662598 -0.0088140368461612217 ;
+	setAttr ".tp" -type "double3" 0.12577034296639766 14.043672190860224 0 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "8BD51A22-43B0-8BE0-E678-51B9422D81F5";
@@ -2113,7 +2113,7 @@ createNode joint -n "Head_Jnt" -p "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".dla" yes;
-createNode parentConstraint -n "Base_Jnt_parentConstraint1" -p "Head_Jnt";
+createNode parentConstraint -n "Base_Jnt_parentConstraint1" -p "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt";
 	rename -uid "132EB795-4D35-D059-8267-61BB7D1C2630";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -2131,7 +2131,7 @@ createNode parentConstraint -n "Base_Jnt_parentConstraint1" -p "Head_Jnt";
 	setAttr ".tg[0].tot" -type "double3" 3.5527136788005009e-15 0 4.2032349822918036e-15 ;
 	setAttr ".rst" -type "double3" 16.485166292901287 -0.81274091976728258 -2.3096800006068563e-07 ;
 	setAttr -k on ".w0";
-createNode scaleConstraint -n "Head_Jnt_scaleConstraint1" -p "Head_Jnt";
+createNode scaleConstraint -n "Head_Jnt_scaleConstraint1" -p "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt";
 	rename -uid "F10613E7-4324-516A-77A3-EAB880143862";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -2329,7 +2329,7 @@ createNode nurbsCurve -n "Lower_arm_ctrlShape" -p "|Controls_IK|Lower_arm_Ctrl_G
 createNode transform -n "PoleVector_Control_Grp" -p "Controls_IK";
 	rename -uid "37E67F22-4ABB-AD46-A803-83841EB03167";
 	setAttr ".t" -type "double3" 11.506677627559348 12.813642501827326 -0.0088010148787678356 ;
-	setAttr ".r" -type "double3" 179.9999539308769 4.5641543686746556e-05 137.48955292196368 ;
+	setAttr ".r" -type "double3" 179.9999539308769 4.5641543686746562e-05 137.48955292196368 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999967 0.99999999999999989 ;
 createNode transform -n "Offset" -p "PoleVector_Control_Grp";
 	rename -uid "B3A795B7-4935-2A80-9469-9099C5CA12FD";
@@ -2459,24 +2459,51 @@ createNode parentConstraint -n "Lower_arm_Jnt_parentConstraint2" -p "|IK_Joints|
 	setAttr ".rst" -type "double3" 1.8142037391662598 4.0175474431556496e-16 0.0088140368461608887 ;
 	setAttr ".rsrr" -type "double3" 359.99994363877846 8.6917842426828879e-05 -9.7639852739439744e-15 ;
 	setAttr -k on ".w0";
+createNode transform -n "RK_Joints";
+	rename -uid "99C74FB2-4948-67DF-4543-5D9CFB758FBA";
+createNode joint -n "Upper_Arm_Jnt" -p "RK_Joints";
+	rename -uid "D047E8C0-4B8D-72A9-C6AE-DBA6492FFE44";
+	setAttr ".t" -type "double3" 8.3392766591967312e-32 2.8142037391662598 -0.0088140368461608887 ;
+	setAttr ".r" -type "double3" 360 0 0 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 180 -3.2000400437774754e-18 42.273689006082755 ;
+createNode joint -n "Upper_arm_Jnt" -p "Upper_Arm_Jnt";
+	rename -uid "B2FDC7D8-4D2C-B88B-6C58-43A3D33AC9C2";
+	setAttr ".t" -type "double3" 15.240602299159534 0.34124353738355229 2.9802319785610099e-08 ;
+	setAttr ".r" -type "double3" 0 0 -2.5444437451708134e-14 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
+	setAttr ".jot" -type "string" "xzy";
+	setAttr ".jo" -type "double3" 0 0 -95.215863915905459 ;
+	setAttr ".pa" -type "double3" 0 0 -5 ;
+createNode joint -n "Head_Jnt" -p "|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt";
+	rename -uid "AC8A1A86-44C5-DAED-AE67-018657712889";
+	setAttr ".t" -type "double3" 16.485166292901287 -0.81274091976726126 -2.3096800234531645e-07 ;
+	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
+	setAttr ".mxrl" -type "double3" 360 360 360 ;
+	setAttr ".dla" yes;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "9C041468-4674-F96A-FE8E-98BD071CAC8E";
+	rename -uid "9623BAC6-47D2-5FB3-4B5F-C690F83CA588";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "8C78CEA9-4E0F-7D9E-F938-FF8638BCE84B";
+	rename -uid "94847039-468F-6844-FAA7-56BE0CF9E551";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "4D377A9C-4119-36EC-65AA-3584AD8E3D3F";
+	rename -uid "9513CD39-4FC6-1AB9-6F76-EE9230B977B5";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "5074FF40-410A-054F-3B32-C3924A2D3E6A";
-	setAttr ".cdl" 2;
-	setAttr -s 10 ".dli[1:9]"  1 10 2 4 5 6 7 8 
+	rename -uid "D985B11F-467E-1E2D-658C-4AAE2E45025F";
+	setAttr ".cdl" 3;
+	setAttr -s 10 ".dli[1:9]"  1 10 2 3 5 6 7 8 
 		9;
 	setAttr -s 8 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "B0EE6848-4080-37C0-CD4C-868FF50F4486";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "2DC4C0A7-483B-19E6-D43E-0EBD81A647C9";
+	rename -uid "4D26E922-460B-597F-3EFF-7A9996272CE4";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "1E0D72A2-4E87-BAD7-4AC4-E3936B9314FC";
 	setAttr ".g" yes;
@@ -2542,14 +2569,16 @@ createNode displayLayer -n "FKJoints";
 createNode displayLayer -n "FKControls";
 	rename -uid "F33462A1-4279-3617-E2D1-80BB5BC988ED";
 	setAttr ".v" no;
-	setAttr ".c" 13;
+	setAttr ".c" 18;
 	setAttr ".do" 3;
 createNode displayLayer -n "IKJoints";
 	rename -uid "842F6099-415F-532D-1ADC-7A85110E5C26";
+	setAttr ".v" no;
 	setAttr ".c" 4;
 	setAttr ".do" 4;
 createNode displayLayer -n "IKControls";
 	rename -uid "06D33727-4A19-7702-E117-F4AA3F5C9601";
+	setAttr ".v" no;
 	setAttr ".c" 13;
 	setAttr ".do" 5;
 createNode groupId -n "groupId37";
@@ -2561,14 +2590,13 @@ createNode groupId -n "groupId38";
 createNode groupId -n "groupId39";
 	rename -uid "80FA8C68-4C86-1D39-A928-16A27F79CC77";
 	setAttr ".ihi" 0;
-createNode displayLayer -n "RK";
-	rename -uid "28C6DF14-4E96-6DEA-B824-03861127BD9D";
-	setAttr ".v" no;
-	setAttr ".c" 14;
-	setAttr ".do" 6;
 createNode displayLayer -n "Root";
 	rename -uid "644E54BC-4E57-9230-729F-19B3BFE86077";
 	setAttr ".v" no;
+	setAttr ".do" 6;
+createNode displayLayer -n "RKJoints";
+	rename -uid "E20048CE-4B0D-3209-E546-FDAE211D1212";
+	setAttr ".c" 19;
 	setAttr ".do" 7;
 select -ne :time1;
 	setAttr ".o" 1;
@@ -2647,22 +2675,37 @@ connectAttr "Upper_arm_Jnt_scaleConstraint1.csy" "|FK_Joints|Lower_arm_Jnt|Upper
 		;
 connectAttr "Upper_arm_Jnt_scaleConstraint1.csz" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt.sz"
 		;
-connectAttr "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt.s" "Head_Jnt.is";
-connectAttr "FKJoints.di" "Head_Jnt.do";
-connectAttr "Base_Jnt_parentConstraint1.ctx" "Head_Jnt.tx";
-connectAttr "Base_Jnt_parentConstraint1.cty" "Head_Jnt.ty";
-connectAttr "Base_Jnt_parentConstraint1.ctz" "Head_Jnt.tz";
-connectAttr "Base_Jnt_parentConstraint1.crx" "Head_Jnt.rx";
-connectAttr "Base_Jnt_parentConstraint1.cry" "Head_Jnt.ry";
-connectAttr "Base_Jnt_parentConstraint1.crz" "Head_Jnt.rz";
-connectAttr "Head_Jnt_scaleConstraint1.csx" "Head_Jnt.sx";
-connectAttr "Head_Jnt_scaleConstraint1.csy" "Head_Jnt.sy";
-connectAttr "Head_Jnt_scaleConstraint1.csz" "Head_Jnt.sz";
-connectAttr "Head_Jnt.ro" "Base_Jnt_parentConstraint1.cro";
-connectAttr "Head_Jnt.pim" "Base_Jnt_parentConstraint1.cpim";
-connectAttr "Head_Jnt.rp" "Base_Jnt_parentConstraint1.crp";
-connectAttr "Head_Jnt.rpt" "Base_Jnt_parentConstraint1.crt";
-connectAttr "Head_Jnt.jo" "Base_Jnt_parentConstraint1.cjo";
+connectAttr "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt.s" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.is"
+		;
+connectAttr "FKJoints.di" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.do";
+connectAttr "Base_Jnt_parentConstraint1.ctx" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.tx"
+		;
+connectAttr "Base_Jnt_parentConstraint1.cty" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.ty"
+		;
+connectAttr "Base_Jnt_parentConstraint1.ctz" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.tz"
+		;
+connectAttr "Base_Jnt_parentConstraint1.crx" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.rx"
+		;
+connectAttr "Base_Jnt_parentConstraint1.cry" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.ry"
+		;
+connectAttr "Base_Jnt_parentConstraint1.crz" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.rz"
+		;
+connectAttr "Head_Jnt_scaleConstraint1.csx" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.sx"
+		;
+connectAttr "Head_Jnt_scaleConstraint1.csy" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.sy"
+		;
+connectAttr "Head_Jnt_scaleConstraint1.csz" "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.sz"
+		;
+connectAttr "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.ro" "Base_Jnt_parentConstraint1.cro"
+		;
+connectAttr "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.pim" "Base_Jnt_parentConstraint1.cpim"
+		;
+connectAttr "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.rp" "Base_Jnt_parentConstraint1.crp"
+		;
+connectAttr "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.rpt" "Base_Jnt_parentConstraint1.crt"
+		;
+connectAttr "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.jo" "Base_Jnt_parentConstraint1.cjo"
+		;
 connectAttr "|Controls_FK|Lower_arm_Ctrl_Grp|Lower_arm_ctrl|Upper_arm_Ctrl_Grp|Upper_arm_Ctrl|Head_Ctrl_Grp|Head_Ctrl.t" "Base_Jnt_parentConstraint1.tg[0].tt"
 		;
 connectAttr "|Controls_FK|Lower_arm_Ctrl_Grp|Lower_arm_ctrl|Upper_arm_Ctrl_Grp|Upper_arm_Ctrl|Head_Ctrl_Grp|Head_Ctrl.rp" "Base_Jnt_parentConstraint1.tg[0].trp"
@@ -2679,8 +2722,10 @@ connectAttr "|Controls_FK|Lower_arm_Ctrl_Grp|Lower_arm_ctrl|Upper_arm_Ctrl_Grp|U
 		;
 connectAttr "Base_Jnt_parentConstraint1.w0" "Base_Jnt_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Head_Jnt.ssc" "Head_Jnt_scaleConstraint1.tsc";
-connectAttr "Head_Jnt.pim" "Head_Jnt_scaleConstraint1.cpim";
+connectAttr "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.ssc" "Head_Jnt_scaleConstraint1.tsc"
+		;
+connectAttr "|FK_Joints|Lower_arm_Jnt|Upper_arm_Jnt|Head_Jnt.pim" "Head_Jnt_scaleConstraint1.cpim"
+		;
 connectAttr "|Controls_FK|Lower_arm_Ctrl_Grp|Lower_arm_ctrl|Upper_arm_Ctrl_Grp|Upper_arm_Ctrl|Head_Ctrl_Grp|Head_Ctrl.s" "Head_Jnt_scaleConstraint1.tg[0].ts"
 		;
 connectAttr "|Controls_FK|Lower_arm_Ctrl_Grp|Lower_arm_ctrl|Upper_arm_Ctrl_Grp|Upper_arm_Ctrl|Head_Ctrl_Grp|Head_Ctrl.pm" "Head_Jnt_scaleConstraint1.tg[0].tpm"
@@ -2768,10 +2813,10 @@ connectAttr "PoleVector_Control.rpt" "ikHandle1_poleVectorConstraint1.tg[0].trt"
 connectAttr "PoleVector_Control.pm" "ikHandle1_poleVectorConstraint1.tg[0].tpm";
 connectAttr "ikHandle1_poleVectorConstraint1.w0" "ikHandle1_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "IKJoints.di" "|IK_Joints|Lower_arm_Jnt.do";
 connectAttr "Lower_arm_Jnt_parentConstraint2.ctx" "|IK_Joints|Lower_arm_Jnt.tx";
 connectAttr "Lower_arm_Jnt_parentConstraint2.cty" "|IK_Joints|Lower_arm_Jnt.ty";
 connectAttr "Lower_arm_Jnt_parentConstraint2.ctz" "|IK_Joints|Lower_arm_Jnt.tz";
+connectAttr "IKJoints.di" "|IK_Joints|Lower_arm_Jnt.do";
 connectAttr "Lower_arm_Jnt_parentConstraint2.crx" "|IK_Joints|Lower_arm_Jnt.rx";
 connectAttr "Lower_arm_Jnt_parentConstraint2.cry" "|IK_Joints|Lower_arm_Jnt.ry";
 connectAttr "Lower_arm_Jnt_parentConstraint2.crz" "|IK_Joints|Lower_arm_Jnt.rz";
@@ -2806,6 +2851,12 @@ connectAttr "|Controls_IK|Lower_arm_Ctrl_Grp|Lower_arm_ctrl.pm" "Lower_arm_Jnt_p
 		;
 connectAttr "Lower_arm_Jnt_parentConstraint2.w0" "Lower_arm_Jnt_parentConstraint2.tg[0].tw"
 		;
+connectAttr "RKJoints.di" "Upper_Arm_Jnt.do";
+connectAttr "Upper_Arm_Jnt.s" "|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.is";
+connectAttr "RKJoints.di" "|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.do";
+connectAttr "|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.s" "|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.is"
+		;
+connectAttr "RKJoints.di" "|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.do";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -2817,8 +2868,8 @@ connectAttr "layerManager.dli[6]" "FKJoints.id";
 connectAttr "layerManager.dli[7]" "FKControls.id";
 connectAttr "layerManager.dli[8]" "IKJoints.id";
 connectAttr "layerManager.dli[9]" "IKControls.id";
-connectAttr "layerManager.dli[2]" "RK.id";
 connectAttr "layerManager.dli[3]" "Root.id";
+connectAttr "layerManager.dli[4]" "RKJoints.id";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "head_geoShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "base_geoShape.iog.og[0]" ":initialShadingGroup.dsm" -na;
