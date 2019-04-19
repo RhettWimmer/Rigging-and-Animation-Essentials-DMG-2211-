@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: 01-lamp_model.ma
-//Last modified: Thu, Apr 18, 2019 10:19:10 PM
+//Last modified: Thu, Apr 18, 2019 10:25:18 PM
 //Codeset: 1252
 requires maya "2019";
 currentUnit -l centimeter -a degree -t film;
@@ -13,14 +13,14 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "B1FA3E2D-49C2-1477-C333-ECB552D89E46";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.218077236702833 10.326387338021199 46.628655648126987 ;
-	setAttr ".r" -type "double3" 357.86164728847228 -1791.4000000020558 -5.0261285641437703e-17 ;
+	setAttr ".t" -type "double3" 4.9660122934946616 22.912292332397598 61.976131733709664 ;
+	setAttr ".r" -type "double3" 347.66164728843967 -1801.4000000017948 1.2427751535306581e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "3A3A9519-4606-A2EE-4319-C79D1945B5E0";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 46.512980485884285;
+	setAttr ".coi" 67.363396667051475;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -79,8 +79,6 @@ createNode transform -n "Geometry";
 	rename -uid "E942E40B-4B1C-6B72-0BAC-55AA2E44BFE8";
 createNode transform -n "base_geo" -p "Geometry";
 	rename -uid "E4737A6F-432D-DD36-14CC-B2A080BDBD71";
-	setAttr ".t" -type "double3" 9.7849154811494643e-49 0 -1.3684555315672042e-48 ;
-	setAttr ".r" -type "double3" -7.0167092985348752e-15 -7.0167092985348752e-15 4.2964952914991011e-31 ;
 	setAttr ".rp" -type "double3" 0 1.2938293333652628 0 ;
 	setAttr ".sp" -type "double3" 0 1.2938293333652628 0 ;
 createNode mesh -n "base_geoShape" -p "base_geo";
@@ -98,8 +96,6 @@ createNode mesh -n "base_geoShape" -p "base_geo";
 	setAttr ".dsm" 2;
 createNode transform -n "lower_arm_geo" -p "base_geo";
 	rename -uid "C77F7972-4FE5-1D55-D290-2CA3C9A76E9A";
-	setAttr ".t" -type "double3" 1.1869051492735187e-15 4.4408920985006262e-16 0 ;
-	setAttr ".r" -type "double3" 359.99471796240249 0.09081747001435965 -4.2125487532898471e-06 ;
 	setAttr ".rp" -type "double3" -8.8817841970012523e-16 2.8142037391662589 -0.0088140368461608887 ;
 	setAttr ".sp" -type "double3" -8.8817841970012523e-16 2.8142037391662589 -0.0088140368461608887 ;
 createNode mesh -n "lower_arm_geoShape" -p "lower_arm_geo";
@@ -117,8 +113,6 @@ createNode mesh -n "lower_arm_geoShape" -p "lower_arm_geo";
 	setAttr ".dsm" 2;
 createNode transform -n "upper_arm_geo" -p "lower_arm_geo";
 	rename -uid "C537B10C-4AC7-2D9C-5EF3-05A84E76E30F";
-	setAttr ".t" -type "double3" 2.5774937739697634e-12 1.3500311979441904e-13 -1.6255262309805563e-09 ;
-	setAttr ".r" -type "double3" -1.8021072521339178e-14 -6.7462546563855074e-15 -1.9083328088781097e-14 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
 	setAttr ".rp" -type "double3" 11.506677627563477 12.813642501831062 -0.0088140666484832503 ;
 	setAttr ".sp" -type "double3" 11.506677627563478 12.813642501831058 -0.0088140666484832503 ;
@@ -139,8 +133,6 @@ createNode mesh -n "upper_arm_geoShape" -p "upper_arm_geo";
 	setAttr ".dsm" 2;
 createNode transform -n "head_geo" -p "upper_arm_geo";
 	rename -uid "E58E60E5-43C5-F3F6-A3DA-538F947912C5";
-	setAttr ".t" -type "double3" -9.7631169815315388e-09 -5.6782667456900526e-10 -1.0488965432320363e-08 ;
-	setAttr ".r" -type "double3" 180.0052820375557 -179.90918252998321 179.99999584018008 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999978 0.99999999999999989 ;
 	setAttr ".rp" -type "double3" -1.1946200132369988 23.353960037231449 -0.0088138356804848706 ;
 	setAttr ".sp" -type "double3" -1.1946200132369991 23.353960037231449 -0.0088138356804848706 ;
@@ -860,6 +852,28 @@ createNode mesh -n "head_geoShapeOrig" -p "head_geo";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode parentConstraint -n "head_geo_parentConstraint1" -p "head_geo";
+	rename -uid "C69FD59C-4207-B53A-E49F-A9B7D2A42709";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Head_JntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -6.8220735727209103e-09 7.0248731276478793e-09 
+		9.2415138042145628e-13 ;
+	setAttr ".tg[0].tor" -type "double3" 179.99471796240249 -0.090817470014380411 137.48955713453699 ;
+	setAttr ".lr" -type "double3" -2.8979077322318956e-14 7.8116162342585327e-15 -2.5444437451708134e-14 ;
+	setAttr ".rst" -type "double3" -9.7631174256207487e-09 -5.6782667456900526e-10 -1.0488965434055086e-08 ;
+	setAttr ".rsrr" -type "double3" 0.0052820375556986701 -0.090817470016798921 -4.1598199287541539e-06 ;
+	setAttr -k on ".w0";
 createNode mesh -n "upper_arm_geoShapeOrig" -p "upper_arm_geo";
 	rename -uid "D4BFF1FE-4D83-A614-4805-0EA0247D90A2";
 	setAttr -k off ".v";
@@ -1193,6 +1207,28 @@ createNode mesh -n "upper_arm_geoShapeOrig" -p "upper_arm_geo";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode parentConstraint -n "upper_arm_geo_parentConstraint1" -p "upper_arm_geo";
+	rename -uid "DAF840B2-48CB-09E0-2692-C39A16B869A4";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Upper_arm_JntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 1.0590268230331601e-05 -1.0913049699468047e-05 
+		0.019160649534033729 ;
+	setAttr ".tg[0].tor" -type "double3" 179.99471796240255 -0.090817470014383062 137.48955713453699 ;
+	setAttr ".lr" -type "double3" 3.5688059853531059e-14 6.7214065729365713e-15 6.3611093629270351e-15 ;
+	setAttr ".rst" -type "double3" 2.5810464876485639e-12 1.3677947663381929e-13 -1.6255262205722154e-09 ;
+	setAttr ".rsrr" -type "double3" 7.4233649303689486e-15 -1.2424041724465624e-17 -1.9083328088781097e-14 ;
+	setAttr -k on ".w0";
 createNode mesh -n "lower_arm_geoShapeOrig" -p "lower_arm_geo";
 	rename -uid "25B60D9A-4A59-0E26-4FF1-7E9C2CF104DA";
 	setAttr -k off ".v";
@@ -1575,6 +1611,28 @@ createNode mesh -n "lower_arm_geoShapeOrig" -p "lower_arm_geo";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode parentConstraint -n "lower_arm_geo_parentConstraint1" -p "lower_arm_geo";
+	rename -uid "513C84C0-418E-3593-A73B-D381409B2F8C";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Upper_Arm_JntW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" -2.2204460492503131e-16 8.8817841970012523e-16 
+		1.7347234759768071e-18 ;
+	setAttr ".tg[0].tor" -type "double3" 179.99471796240252 -0.090817470014373833 42.2736932186315 ;
+	setAttr ".lr" -type "double3" 1.2347968702941803e-14 7.6391700095584017e-17 6.3611093629270335e-15 ;
+	setAttr ".rst" -type "double3" 1.3213321775814825e-15 0 -1.7347234759768071e-18 ;
+	setAttr ".rsrr" -type "double3" 359.99471796240249 0.090817470014359691 -4.2125487469287381e-06 ;
+	setAttr -k on ".w0";
 createNode mesh -n "base_geoShapeOrig" -p "base_geo";
 	rename -uid "2CBCA519-4754-72CD-252E-8DB18ADD7C8B";
 	setAttr -k off ".v";
@@ -2108,6 +2166,29 @@ createNode mesh -n "base_geoShapeOrig" -p "base_geo";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode parentConstraint -n "base_geo_parentConstraint1" -p "base_geo";
+	rename -uid "BB419EEB-4B5D-119B-57B9-CE83B9AC27B4";
+	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "ROOT_JNTW0" -dv 1 -min 0 -at "double";
+	setAttr -k on ".nds";
+	setAttr -k off ".v";
+	setAttr -k off ".tx";
+	setAttr -k off ".ty";
+	setAttr -k off ".tz";
+	setAttr -k off ".rx";
+	setAttr -k off ".ry";
+	setAttr -k off ".rz";
+	setAttr -k off ".sx";
+	setAttr -k off ".sy";
+	setAttr -k off ".sz";
+	setAttr ".erp" yes;
+	setAttr ".tg[0].tot" -type "double3" 0.29382933336526285 6.5243218242475109e-17 
+		7.9899898386719365e-33 ;
+	setAttr ".tg[0].tor" -type "double3" 180 -7.016709298534876e-15 90.000000000000014 ;
+	setAttr ".lr" -type "double3" -7.0167092985348752e-15 -7.0167092985348752e-15 4.2964952914991011e-31 ;
+	setAttr ".rst" -type "double3" 9.7849154811494643e-49 0 -1.3684555315672042e-48 ;
+	setAttr ".rsrr" -type "double3" -7.0167092985348752e-15 -7.0167092985348752e-15 
+		4.2964952914991011e-31 ;
+	setAttr -k on ".w0";
 createNode joint -n "ROOT_JNT";
 	rename -uid "DF57D00E-4485-7A50-1592-A59D5FEAAE1D";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
@@ -2316,6 +2397,7 @@ createNode parentConstraint -n "Lower_arm_Jnt_parentConstraint2" -p "|ROOT_JNT|I
 	setAttr -k on ".w0";
 createNode transform -n "RK_Joints" -p "ROOT_JNT";
 	rename -uid "99C74FB2-4948-67DF-4543-5D9CFB758FBA";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -1 -2.2204460492503131e-16 -2.7192621468937821e-32 ;
 	setAttr ".r" -type "double3" 180 0 90.000000000000014 ;
 createNode joint -n "Upper_Arm_Jnt" -p "RK_Joints";
@@ -2823,27 +2905,24 @@ createNode script -n "sceneConfigurationScriptNode";
 	setAttr ".st" 6;
 createNode displayLayer -n "geo_layer";
 	rename -uid "702C94B0-406D-5828-5EF8-F6A199AA5871";
+	setAttr ".dt" 2;
 	setAttr ".do" 1;
 createNode ikRPsolver -n "ikRPsolver";
 	rename -uid "C6DF7FD0-45EF-A1B9-4A25-B7A7E4B2F47A";
 createNode displayLayer -n "FKJoints";
 	rename -uid "45B8A85D-41B4-C6D4-FA7E-7EBF6789BB34";
-	setAttr ".v" no;
 	setAttr ".c" 6;
 	setAttr ".do" 2;
 createNode displayLayer -n "FKControls";
 	rename -uid "F33462A1-4279-3617-E2D1-80BB5BC988ED";
-	setAttr ".v" no;
 	setAttr ".c" 18;
 	setAttr ".do" 3;
 createNode displayLayer -n "IKJoints";
 	rename -uid "842F6099-415F-532D-1ADC-7A85110E5C26";
-	setAttr ".v" no;
 	setAttr ".c" 4;
 	setAttr ".do" 4;
 createNode displayLayer -n "IKControls";
 	rename -uid "06D33727-4A19-7702-E117-F4AA3F5C9601";
-	setAttr ".v" no;
 	setAttr ".c" 13;
 	setAttr ".do" 5;
 createNode displayLayer -n "Root";
@@ -2948,19 +3027,127 @@ select -ne :hardwareRenderGlobals;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
 connectAttr "geo_layer.di" "base_geo.do";
+connectAttr "base_geo_parentConstraint1.ctx" "base_geo.tx";
+connectAttr "base_geo_parentConstraint1.cty" "base_geo.ty";
+connectAttr "base_geo_parentConstraint1.ctz" "base_geo.tz";
+connectAttr "base_geo_parentConstraint1.crx" "base_geo.rx";
+connectAttr "base_geo_parentConstraint1.cry" "base_geo.ry";
+connectAttr "base_geo_parentConstraint1.crz" "base_geo.rz";
 connectAttr "groupId40.id" "base_geoShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "base_geoShape.iog.og[0].gco";
 connectAttr "groupParts1.og" "base_geoShape.i";
 connectAttr "geo_layer.di" "lower_arm_geo.do";
+connectAttr "lower_arm_geo_parentConstraint1.ctx" "lower_arm_geo.tx";
+connectAttr "lower_arm_geo_parentConstraint1.cty" "lower_arm_geo.ty";
+connectAttr "lower_arm_geo_parentConstraint1.ctz" "lower_arm_geo.tz";
+connectAttr "lower_arm_geo_parentConstraint1.crx" "lower_arm_geo.rx";
+connectAttr "lower_arm_geo_parentConstraint1.cry" "lower_arm_geo.ry";
+connectAttr "lower_arm_geo_parentConstraint1.crz" "lower_arm_geo.rz";
 connectAttr "groupId43.id" "lower_arm_geoShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "lower_arm_geoShape.iog.og[0].gco";
 connectAttr "groupParts4.og" "lower_arm_geoShape.i";
 connectAttr "geo_layer.di" "upper_arm_geo.do";
+connectAttr "upper_arm_geo_parentConstraint1.ctx" "upper_arm_geo.tx";
+connectAttr "upper_arm_geo_parentConstraint1.cty" "upper_arm_geo.ty";
+connectAttr "upper_arm_geo_parentConstraint1.ctz" "upper_arm_geo.tz";
+connectAttr "upper_arm_geo_parentConstraint1.crx" "upper_arm_geo.rx";
+connectAttr "upper_arm_geo_parentConstraint1.cry" "upper_arm_geo.ry";
+connectAttr "upper_arm_geo_parentConstraint1.crz" "upper_arm_geo.rz";
 connectAttr "groupId46.id" "upper_arm_geoShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "upper_arm_geoShape.iog.og[0].gco";
 connectAttr "groupParts7.og" "upper_arm_geoShape.i";
 connectAttr "geo_layer.di" "head_geo.do";
+connectAttr "head_geo_parentConstraint1.ctx" "head_geo.tx";
+connectAttr "head_geo_parentConstraint1.cty" "head_geo.ty";
+connectAttr "head_geo_parentConstraint1.ctz" "head_geo.tz";
+connectAttr "head_geo_parentConstraint1.crx" "head_geo.rx";
+connectAttr "head_geo_parentConstraint1.cry" "head_geo.ry";
+connectAttr "head_geo_parentConstraint1.crz" "head_geo.rz";
 connectAttr "head_geoShapeOrig.w" "head_geoShape.i";
+connectAttr "head_geo.ro" "head_geo_parentConstraint1.cro";
+connectAttr "head_geo.pim" "head_geo_parentConstraint1.cpim";
+connectAttr "head_geo.rp" "head_geo_parentConstraint1.crp";
+connectAttr "head_geo.rpt" "head_geo_parentConstraint1.crt";
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.t" "head_geo_parentConstraint1.tg[0].tt"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.rp" "head_geo_parentConstraint1.tg[0].trp"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.rpt" "head_geo_parentConstraint1.tg[0].trt"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.r" "head_geo_parentConstraint1.tg[0].tr"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.ro" "head_geo_parentConstraint1.tg[0].tro"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.s" "head_geo_parentConstraint1.tg[0].ts"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.pm" "head_geo_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.jo" "head_geo_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.ssc" "head_geo_parentConstraint1.tg[0].tsc"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt|Head_Jnt.is" "head_geo_parentConstraint1.tg[0].tis"
+		;
+connectAttr "head_geo_parentConstraint1.w0" "head_geo_parentConstraint1.tg[0].tw"
+		;
+connectAttr "upper_arm_geo.ro" "upper_arm_geo_parentConstraint1.cro";
+connectAttr "upper_arm_geo.pim" "upper_arm_geo_parentConstraint1.cpim";
+connectAttr "upper_arm_geo.rp" "upper_arm_geo_parentConstraint1.crp";
+connectAttr "upper_arm_geo.rpt" "upper_arm_geo_parentConstraint1.crt";
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.t" "upper_arm_geo_parentConstraint1.tg[0].tt"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.rp" "upper_arm_geo_parentConstraint1.tg[0].trp"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.rpt" "upper_arm_geo_parentConstraint1.tg[0].trt"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.r" "upper_arm_geo_parentConstraint1.tg[0].tr"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.ro" "upper_arm_geo_parentConstraint1.tg[0].tro"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.s" "upper_arm_geo_parentConstraint1.tg[0].ts"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.pm" "upper_arm_geo_parentConstraint1.tg[0].tpm"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.jo" "upper_arm_geo_parentConstraint1.tg[0].tjo"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.ssc" "upper_arm_geo_parentConstraint1.tg[0].tsc"
+		;
+connectAttr "|ROOT_JNT|RK_Joints|Upper_Arm_Jnt|Upper_arm_Jnt.is" "upper_arm_geo_parentConstraint1.tg[0].tis"
+		;
+connectAttr "upper_arm_geo_parentConstraint1.w0" "upper_arm_geo_parentConstraint1.tg[0].tw"
+		;
+connectAttr "lower_arm_geo.ro" "lower_arm_geo_parentConstraint1.cro";
+connectAttr "lower_arm_geo.pim" "lower_arm_geo_parentConstraint1.cpim";
+connectAttr "lower_arm_geo.rp" "lower_arm_geo_parentConstraint1.crp";
+connectAttr "lower_arm_geo.rpt" "lower_arm_geo_parentConstraint1.crt";
+connectAttr "Upper_Arm_Jnt.t" "lower_arm_geo_parentConstraint1.tg[0].tt";
+connectAttr "Upper_Arm_Jnt.rp" "lower_arm_geo_parentConstraint1.tg[0].trp";
+connectAttr "Upper_Arm_Jnt.rpt" "lower_arm_geo_parentConstraint1.tg[0].trt";
+connectAttr "Upper_Arm_Jnt.r" "lower_arm_geo_parentConstraint1.tg[0].tr";
+connectAttr "Upper_Arm_Jnt.ro" "lower_arm_geo_parentConstraint1.tg[0].tro";
+connectAttr "Upper_Arm_Jnt.s" "lower_arm_geo_parentConstraint1.tg[0].ts";
+connectAttr "Upper_Arm_Jnt.pm" "lower_arm_geo_parentConstraint1.tg[0].tpm";
+connectAttr "Upper_Arm_Jnt.jo" "lower_arm_geo_parentConstraint1.tg[0].tjo";
+connectAttr "Upper_Arm_Jnt.ssc" "lower_arm_geo_parentConstraint1.tg[0].tsc";
+connectAttr "Upper_Arm_Jnt.is" "lower_arm_geo_parentConstraint1.tg[0].tis";
+connectAttr "lower_arm_geo_parentConstraint1.w0" "lower_arm_geo_parentConstraint1.tg[0].tw"
+		;
+connectAttr "base_geo.ro" "base_geo_parentConstraint1.cro";
+connectAttr "base_geo.pim" "base_geo_parentConstraint1.cpim";
+connectAttr "base_geo.rp" "base_geo_parentConstraint1.crp";
+connectAttr "base_geo.rpt" "base_geo_parentConstraint1.crt";
+connectAttr "ROOT_JNT.t" "base_geo_parentConstraint1.tg[0].tt";
+connectAttr "ROOT_JNT.rp" "base_geo_parentConstraint1.tg[0].trp";
+connectAttr "ROOT_JNT.rpt" "base_geo_parentConstraint1.tg[0].trt";
+connectAttr "ROOT_JNT.r" "base_geo_parentConstraint1.tg[0].tr";
+connectAttr "ROOT_JNT.ro" "base_geo_parentConstraint1.tg[0].tro";
+connectAttr "ROOT_JNT.s" "base_geo_parentConstraint1.tg[0].ts";
+connectAttr "ROOT_JNT.pm" "base_geo_parentConstraint1.tg[0].tpm";
+connectAttr "ROOT_JNT.jo" "base_geo_parentConstraint1.tg[0].tjo";
+connectAttr "ROOT_JNT.ssc" "base_geo_parentConstraint1.tg[0].tsc";
+connectAttr "ROOT_JNT.is" "base_geo_parentConstraint1.tg[0].tis";
+connectAttr "base_geo_parentConstraint1.w0" "base_geo_parentConstraint1.tg[0].tw"
+		;
 connectAttr "Root.di" "ROOT_JNT.do";
 connectAttr "ROOT_JNT_parentConstraint1.ctx" "ROOT_JNT.tx";
 connectAttr "ROOT_JNT_parentConstraint1.cty" "ROOT_JNT.ty";
