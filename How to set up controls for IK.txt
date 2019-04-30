@@ -8,3 +8,5 @@ Tip has IKhandler parented right under it
 
 Root is just parent constrained to jnt
 
+Take elbow node and pole vector contrain it to 
+ik handle
